@@ -52,6 +52,29 @@ SELECT slug, name FROM public.cities;
 SELECT id, display_name FROM public.profiles;
 ```
 
+## Optional: synthetic seed data
+
+`seed.sql` adds 12 fictional providers across the 6 launch cities so the directory has something to render during development. It's optional, idempotent, and clearly marked synthetic data.
+
+To apply: open Studio SQL Editor → paste `seed.sql` → run.
+
+The seed creates:
+
+- 12 fake `auth.users` (placeholder bcrypt passwords — these accounts cannot log in until we set real passwords via the Auth admin API)
+- 12 published profiles spread across Brussels (5), Antwerp (2), Ghent (2), Liège, Charleroi, Bruges
+- Translations in EN for all, plus FR and/or NL for some — deliberately **incomplete coverage** to test the locale fallback rule (e.g., Camille has only FR; Maya has only NL)
+- 1 cover photo per provider via `placehold.co` (Courtly palette colour swatches; not real imagery)
+- 2–3 contact methods per provider (mix of WhatsApp, Telegram, Phone, Email)
+- All on `founding_free` subscriptions
+
+Sanity check queries are at the bottom of `seed.sql` (commented out by default).
+
+To remove seed data later, delete the auth users — `ON DELETE CASCADE` will clean up all related rows:
+
+```sql
+DELETE FROM auth.users WHERE email LIKE '%+seed@thecourtly.com';
+```
+
 ## Storage buckets — TODO
 
 Profile photos and verification documents will need Supabase Storage buckets:
