@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#15110e",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#2a2622",
+                        "outline": "#7d766f",
+                        "inverse-primary": "#cdc5bf",
+                        "primary-fixed-dim": "#cdc5bf",
+                        "surface-container-high": "#ebe8e2",
+                        "surface-container": "#f1ede7",
+                        "tertiary-fixed-dim": "#cdc6ba",
+                        "surface-container-highest": "#e6e2dc",
+                        "on-secondary-fixed": "#211a16",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#2a261e",
+                        "surface-dim": "#ddd9d4",
+                        "secondary": "#665c57",
+                        "surface-variant": "#e6e2dc",
+                        "surface-bright": "#fdf9f3",
+                        "on-background": "#1c1c18",
+                        "on-primary-fixed": "#1f1b17",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fdf9f3",
+                        "on-secondary-container": "#6c625d",
+                        "on-primary-container": "#938d87",
+                        "tertiary-fixed": "#e9e1d5",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fdf9f3",
+                        "tertiary": "#14120b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#938d82",
+                        "on-primary-fixed-variant": "#4b4641",
+                        "secondary-fixed-dim": "#d1c4bd",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f7f3ed",
+                        "on-surface": "#1c1c18",
+                        "inverse-surface": "#31302d",
+                        "on-surface-variant": "#4c463f",
+                        "inverse-on-surface": "#f4f0ea",
+                        "surface-tint": "#635d58",
+                        "secondary-fixed": "#eee0d8",
+                        "primary-fixed": "#eae1da",
+                        "on-tertiary-fixed-variant": "#4b463e",
+                        "on-secondary-fixed-variant": "#4e4540",
+                        "outline-variant": "#cfc5bc",
+                        "on-tertiary-fixed": "#1e1b14",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#eee0d8",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "section-gap": "120px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Noto Serif"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["2rem", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "display-lg": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["1.125rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["3rem", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["0.75rem", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FDFCFB;
+        }
+        .editorial-shadow {
+            box-shadow: 0 4px 20px -2px rgba(61, 53, 48, 0.08);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface bg-background">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-[#FDFCFB] border-b border-[#E6E2DF] shadow-sm shadow-[#3D3530]/5 h-20">
+<nav class="flex justify-between items-center h-full px-8 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-serif italic text-[#3D3530]" href="#">Courtly</a>
+<div class="hidden md:flex gap-8">
+<a class="font-serif tracking-tight text-[#3D3530]/60 hover:text-[#3D3530] transition-colors duration-300" href="#">Discover</a>
+<a class="font-serif tracking-tight text-[#3D3530]/60 hover:text-[#3D3530] transition-colors duration-300" href="#">Our Story</a>
+<a class="font-serif tracking-tight text-[#3D3530]/60 hover:text-[#3D3530] transition-colors duration-300" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-serif tracking-tight text-[#3D3530]/60 hover:text-[#3D3530] transition-colors duration-300">Provider Login</button>
+<button class="material-symbols-outlined text-[#3D3530]/60" data-icon="language">language</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-serif tracking-tight hover:opacity-90 transition-opacity">Apply to Join</button>
+</div>
+</nav>
+</header>
+<main class="max-w-[1280px] mx-auto px-8 pt-12 pb-24">
+<!-- Hero Strip -->
+<div class="mb-12">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-4 block">Provider Application</span>
+<h1 class="font-display-lg text-headline-xl md:text-display-lg text-primary mb-8">Apply to publish on Courtly</h1>
+<!-- Progress Indicator -->
+<div class="flex items-center gap-2 overflow-x-auto pb-4">
+<div class="flex items-center shrink-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0; font-weight: 700;">check</span>
+</div>
+<div class="w-8 h-px bg-outline-variant"></div>
+</div>
+<div class="flex items-center shrink-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0; font-weight: 700;">check</span>
+</div>
+<div class="w-8 h-px bg-outline-variant"></div>
+</div>
+<div class="flex items-center shrink-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0; font-weight: 700;">check</span>
+</div>
+<div class="w-8 h-px bg-outline-variant"></div>
+</div>
+<div class="flex items-center shrink-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0; font-weight: 700;">check</span>
+</div>
+<div class="w-8 h-px bg-outline-variant"></div>
+</div>
+<div class="flex items-center shrink-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0; font-weight: 700;">check</span>
+</div>
+<div class="w-8 h-px bg-outline-variant"></div>
+</div>
+<div class="flex items-center shrink-0">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0; font-weight: 700;">check</span>
+</div>
+<div class="w-8 h-px bg-outline-variant"></div>
+</div>
+<div class="flex items-center shrink-0">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold">7</div>
+<span class="ml-3 font-serif italic text-primary">Submit</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column -->
+<div class="lg:col-span-8 space-y-16">
+<!-- Review Section -->
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b border-surface-container-highest pb-4">Review your application</h2>
+<div class="space-y-6"><!-- Summary Cards -->
+<div class="space-y-4">
+<!-- Card 1: ACCOUNT -->
+<div class="bg-surface-container-low p-8 rounded-lg border border-surface-container flex justify-between items-start">
+<div class="space-y-2">
+<h3 class="font-label-caps text-secondary uppercase tracking-widest">Account</h3>
+<div class="text-primary">
+<p>Email: isabella@privatemail.eu</p>
+<p>Phone for 2FA: Not added</p>
+</div>
+</div>
+<button class="font-serif italic text-primary underline underline-offset-4 hover:text-secondary transition-colors shrink-0">Edit →</button>
+</div>
+<!-- Card 2: IDENTITY VERIFICATION -->
+<div class="bg-surface-container-low p-8 rounded-lg border border-surface-container flex justify-between items-start">
+<div class="space-y-3">
+<h3 class="font-label-caps text-secondary uppercase tracking-widest">Identity Verification</h3>
+<div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary-container text-on-secondary-container italic uppercase">
+                Pending review
+            </div>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-xl">
+                Your ID and selfie have been submitted. Verification typically completes within 3–5 working days.
+            </p>
+</div>
+<button class="font-serif italic text-primary underline underline-offset-4 hover:text-secondary transition-colors shrink-0">Edit →</button>
+</div>
+<!-- Card 3: PROFILE -->
+<div class="bg-surface-container-low p-8 rounded-lg border border-surface-container flex justify-between items-start">
+<div class="space-y-3">
+<h3 class="font-label-caps text-secondary uppercase tracking-widest">Profile</h3>
+<div class="space-y-2">
+<p class="font-serif text-lg text-primary">Isabella · Age: 31 · Gender: Female</p>
+<p class="text-sm text-on-surface-variant"><span class="font-semibold text-secondary uppercase text-[10px] tracking-wider">Languages:</span> Français · English · Nederlands</p>
+<p class="italic font-serif text-primary">"Art history, architecture, and unhurried conversation in the Sablon."</p>
+<p class="text-sm text-on-surface-variant line-clamp-2 max-w-xl">I'm an art historian by training and by inclination — I work freelance with smaller Belgian galleries...</p>
+</div>
+</div>
+<button class="font-serif italic text-primary underline underline-offset-4 hover:text-secondary transition-colors shrink-0">Edit →</button>
+</div>
+<!-- Card 4: SERVICE & LOCATION -->
+<div class="bg-surface-container-low p-8 rounded-lg border border-surface-container flex justify-between items-start">
+<div class="space-y-3">
+<h3 class="font-label-caps text-secondary uppercase tracking-widest">Service &amp; Location</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 text-sm">
+<p><span class="text-secondary uppercase text-[10px] font-semibold tracking-wider">Base city:</span> Brussels</p>
+<p><span class="text-secondary uppercase text-[10px] font-semibold tracking-wider">Modality:</span> Incall fixed · Outcall</p>
+<p><span class="text-secondary uppercase text-[10px] font-semibold tracking-wider">Service areas:</span> Sablon · Brussels Centre · Ixelles <span class="text-secondary/60 text-xs">(3 of 5)</span></p>
+<p><span class="text-secondary uppercase text-[10px] font-semibold tracking-wider">Welcomes:</span> All</p>
+</div>
+</div>
+<button class="font-serif italic text-primary underline underline-offset-4 hover:text-secondary transition-colors shrink-0">Edit →</button>
+</div>
+<!-- Card 5: PHOTOS & RATES -->
+<div class="bg-surface-container-low p-8 rounded-lg border border-surface-container flex justify-between items-start">
+<div class="space-y-3">
+<h3 class="font-label-caps text-secondary uppercase tracking-widest">Photos &amp; Rates</h3>
+<div class="space-y-2 text-sm">
+<p><span class="text-secondary uppercase text-[10px] font-semibold tracking-wider">Gallery:</span> 5 photos uploaded <span class="text-secondary/60 text-xs">(3 minimum, 12 maximum)</span></p>
+<p><span class="text-secondary uppercase text-[10px] font-semibold tracking-wider">Hourly rate:</span> <span class="text-primary font-serif text-lg">€350</span> · Filter band: €€</p>
+<p><span class="text-secondary uppercase text-[10px] font-semibold tracking-wider">Rates set:</span> 1 hour · 2 hours · 3 hours · Dinner date · Overnight · Outcall surcharge</p>
+<p><span class="text-secondary uppercase text-[10px] font-semibold tracking-wider">Contact methods:</span> WhatsApp · Telegram · Email <span class="text-secondary/60 text-xs italic">(Phone not enabled)</span></p>
+</div>
+</div>
+<button class="font-serif italic text-primary underline underline-offset-4 hover:text-secondary transition-colors shrink-0">Edit →</button>
+</div>
+</div></div>
+</section>
+<!-- Pricing Section -->
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b border-surface-container-highest pb-4">Choose your pricing tier</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Standard Tier (Selected) -->
+<div class="border-2 border-primary bg-surface-bright p-8 rounded-xl relative editorial-shadow">
+<div class="absolute -top-3 left-8 bg-primary text-on-primary px-4 py-1 text-[10px] font-label-caps uppercase tracking-widest">Selected</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Standard</h3>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="text-2xl font-serif text-primary">€29</span>
+<span class="text-secondary">/month</span>
+</div>
+<p class="text-sm text-secondary italic mb-6">Founding Provider: First 6 months free</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+<span>Verified Profile Listing</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+<span>Standard Gallery Access</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+<span>Direct Client Messaging</span>
+</li>
+</ul>
+</div>
+<!-- Featured Tier -->
+<div class="border border-surface-container-highest bg-surface-container-low p-8 rounded-xl hover:border-outline-variant transition-colors">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Featured</h3>
+<div class="flex items-baseline gap-2 mb-6">
+<span class="text-2xl font-serif text-primary">€69</span>
+<span class="text-secondary">/month</span>
+</div>
+<p class="text-sm text-secondary italic mb-6">Founding Provider: First 6 months free</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+<span>Top Placement in Discover</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+<span>High-Resolution Media Expansion</span>
+</li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check</span>
+<span>Priority Support Access</span>
+</li>
+</ul>
+<button class="w-full border border-primary py-3 rounded-full font-serif text-primary hover:bg-primary hover:text-on-primary transition-all">Switch to Featured</button>
+</div>
+</div>
+</section>
+<!-- Confirmation Section -->
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b border-surface-container-highest pb-4">Confirm and submit</h2>
+<div class="space-y-4 bg-surface-container-low p-8 rounded-lg">
+<label class="flex items-start gap-4 cursor-pointer group">
+<input checked="" class="mt-1 w-5 h-5 rounded border-outline text-primary focus:ring-primary" readonly="" type="checkbox"/>
+<span class="text-sm leading-relaxed text-on-surface-variant">I agree to the Courtly Terms of Service and ethical guidelines for providers.</span>
+</label>
+<label class="flex items-start gap-4 cursor-pointer group">
+<input checked="" class="mt-1 w-5 h-5 rounded border-outline text-primary focus:ring-primary" readonly="" type="checkbox"/>
+<span class="text-sm leading-relaxed text-on-surface-variant">I consent to the processing of my data in accordance with GDPR and Privacy Policy.</span>
+</label>
+<label class="flex items-start gap-4 cursor-pointer group">
+<input checked="" class="mt-1 w-5 h-5 rounded border-outline text-primary focus:ring-primary" readonly="" type="checkbox"/>
+<span class="text-sm leading-relaxed text-on-surface-variant">I have read and agree to the Acceptable Use Policy (AUP).</span>
+</label>
+<label class="flex items-start gap-4 cursor-pointer group">
+<input checked="" class="mt-1 w-5 h-5 rounded border-outline text-primary focus:ring-primary" readonly="" type="checkbox"/>
+<span class="text-sm leading-relaxed text-on-surface-variant">I confirm that I am at least 18 years of age.</span>
+</label>
+<label class="flex items-start gap-4 cursor-pointer group">
+<input checked="" class="mt-1 w-5 h-5 rounded border-outline text-primary focus:ring-primary" readonly="" type="checkbox"/>
+<span class="text-sm leading-relaxed text-on-surface-variant">I certify that I am an independent provider and not part of an agency.</span>
+</label>
+</div>
+<div class="mt-12">
+<button class="w-full md:w-auto bg-[#3D3530] text-[#FDFCFB] px-12 py-5 rounded-full font-serif text-xl tracking-tight hover:opacity-90 transition-opacity editorial-shadow">
+                            Submit application
+                        </button>
+</div>
+</section>
+</div>
+<!-- Right Column (Sticky Sidebar) -->
+<div class="lg:col-span-4 space-y-8">
+<div class="sticky top-32 space-y-8">
+<!-- What happens next -->
+<div class="bg-surface-container-high p-8 rounded-xl">
+<h4 class="font-serif italic text-xl text-primary mb-4">What happens next</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4">Your application has entered our curation queue. Our team reviews every profile manually to maintain the Courtly standard of exclusivity.</p>
+<div class="flex items-center gap-4 text-sm font-semibold text-primary">
+<span class="material-symbols-outlined">schedule</span>
+<span>3–5 business days review</span>
+</div>
+</div>
+<!-- About pricing -->
+<div class="bg-surface-container-high p-8 rounded-xl">
+<h4 class="font-serif italic text-xl text-primary mb-4">About pricing</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4">We are currently in our founding period. All new providers receive their first 6 months of the selected tier free of charge.</p>
+<p class="text-sm text-on-surface-variant leading-relaxed">No payment details are required today. You'll be notified before your founding period ends, with plenty of notice to set up payment if you decide to continue.</p>
+</div>
+<!-- Need help? -->
+<div class="bg-surface-container-high p-8 rounded-xl">
+<h4 class="font-serif italic text-xl text-primary mb-4">Need help?</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-6">Our provider support team is available for any questions regarding the application process.</p>
+<a class="text-primary font-bold border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors" href="mailto:applications@courtly.com">applications@courtly.com</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Compliance Band -->
+<div class="mt-24 py-8 border-t border-surface-container-highest">
+<p class="text-sm text-secondary italic text-center max-w-3xl mx-auto">Courtly is an advertising directory only. Providers are independent adults who publish and manage their own profiles. Courtly does not arrange meetings, process client payments, collect deposits, set rates, manage schedules, employ providers, or act as an agency.</p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-surface-container-highest bg-surface py-16">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-6 gap-12 mb-16">
+<div class="col-span-2">
+<a class="font-headline-md text-headline-md text-primary mb-6 block" href="#">Courtly</a>
+<p class="text-on-surface-variant max-w-xs mb-6">
+                    A curated advertising directory for independent companions across Belgium.
+                </p>
+<div class="flex gap-3 text-sm font-label-caps uppercase tracking-wider text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">FR</a>
+<span>·</span>
+<a class="hover:text-primary transition-colors" href="#">NL</a>
+<span>·</span>
+<a class="text-primary font-bold" href="#">EN</a>
+<span>·</span>
+<a class="hover:text-primary transition-colors" href="#">DE</a>
+</div>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-secondary mb-6 uppercase">Browse</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Brussels</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Antwerp</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Ghent</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Bruges</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Liège</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Namur</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-secondary mb-6 uppercase">For providers</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Apply to Join</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Provider Login</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Documentation</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-secondary mb-6 uppercase">Trust &amp; Safety</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Verification</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Safety Tips</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Reporting</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-secondary mb-6 uppercase">Legal</h5>
+<ul class="space-y-4 text-sm"><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Policy</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Cookie Settings</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Acceptable Use Policy</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Imprint / Mentions légales</a></li><li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">DSA point of contact</a></li></ul>
+</div>
+</div>
+<div class="space-y-8 pt-8 border-t border-surface-container-highest">
+<p class="text-xs text-center text-on-surface-variant tracking-widest uppercase">USERS MUST BE 18+ TO ACCESS THIS SITE. PLEASE CONSULT LOCAL LAWS IN YOUR JURISDICTION. THIS WEBSITE IS A CURATED ADVERTISING PLATFORM.</p>
+<p class="text-xs text-center text-on-surface-variant italic max-w-4xl mx-auto leading-relaxed">Courtly is an adult advertising directory for independent providers. Courtly does not arrange bookings, collect client payments, process deposits, or act as an agency.</p>
+<p class="text-xs text-center text-on-surface-variant">Copyright © 2026 Courtly. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

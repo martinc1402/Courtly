@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brussels City Guide | Courtly</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#665c57",
+                        "on-secondary-fixed-variant": "#4e4540",
+                        "outline-variant": "#cfc5bc",
+                        "surface-container-high": "#ebe8e2",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1c1c18",
+                        "surface-container": "#f1ede7",
+                        "primary-fixed": "#eae1da",
+                        "tertiary-container": "#2a261e",
+                        "secondary-container": "#eee0d8",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1c1c18",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e6e2dc",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#635d58",
+                        "primary-container": "#2a2622",
+                        "on-surface-variant": "#4c463f",
+                        "surface": "#fdf9f3",
+                        "primary": "#15110e",
+                        "secondary-fixed-dim": "#d1c4bd",
+                        "on-tertiary-fixed-variant": "#4b463e",
+                        "on-tertiary-container": "#938d82",
+                        "tertiary": "#14120b",
+                        "primary-fixed-dim": "#cdc5bf",
+                        "outline": "#7d766f",
+                        "surface-container-highest": "#e6e2dc",
+                        "on-tertiary-fixed": "#1e1b14",
+                        "surface-dim": "#ddd9d4",
+                        "inverse-primary": "#cdc5bf",
+                        "on-primary-container": "#938d87",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f7f3ed",
+                        "on-primary-fixed-variant": "#4b4641",
+                        "inverse-on-surface": "#f4f0ea",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#e9e1d5",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#211a16",
+                        "background": "#fdf9f3",
+                        "secondary-fixed": "#eee0d8",
+                        "surface-bright": "#fdf9f3",
+                        "on-secondary-container": "#6c625d",
+                        "inverse-surface": "#31302d",
+                        "tertiary-fixed-dim": "#cdc6ba",
+                        "on-primary-fixed": "#1f1b17",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Noto Serif"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["1.125rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["0.75rem", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["3rem", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-md": ["2rem", {"lineHeight": "1.3", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 72px;
+            line-height: 60px;
+            padding-top: 4px;
+            padding-right: 12px;
+            padding-left: 3px;
+            font-family: 'Noto Serif', serif;
+            color: #A88B6E;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
+<!-- Header -->
+<header class="sticky top-0 h-[56px] w-full z-50 bg-[#F7F3ED] border-b border-[#D9D4D0] flex items-center justify-between px-8">
+<div class="flex items-center gap-8">
+<span class="text-xl font-headline-xl italic tracking-tight text-primary">Courtly</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Companions</a>
+<a class="text-label-caps text-primary border-b border-primary pb-0.5" href="#">Cities</a>
+<a class="text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<a class="text-label-caps text-on-surface-variant hover:text-primary" href="#">Provider login</a>
+<button class="px-4 py-1.5 border border-outline text-label-caps hover:bg-primary hover:text-on-primary transition-all">Apply as a provider</button>
+<div class="flex items-center gap-1 cursor-pointer">
+<span class="text-label-caps">EN</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[560px] w-full overflow-hidden bg-primary">
+<div class="absolute inset-0 opacity-80">
+<img class="w-full h-full object-cover" data-alt="A cinematic, atmospheric wide shot of Brussels Grand Place at dawn." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiI1Wp421FNfSv7MxZLvuA8Y0zkc3zwMa6VsiwDAA9IXCpYN4ayKOW6LJpn3lwxPRX93W2AnRFXde6cptXit9iO_0IDOWJe4hfw4Qc4zxII6Nk0-IZl579nWDcUC6tJjiQZ0Hc-2rVXYiJYPT3Lxa8HbgbmzfaUOBZK9KZnsALMSxC3tIXJvmRoSQND0gEilJZVw7iHfBe4VBXaerH3V5NN_ovaHl5BwKt3GDSpYHXtilUM-CENoMRAgC8lKurZ7Mtl23l6quCGfs"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-16 left-8 md:left-[80px] max-w-[800px]">
+<p class="text-label-caps text-white mb-4 tracking-[0.2em]">BELGIUM · CITY GUIDE</p>
+<h1 class="font-display-lg text-white mb-6">Brussels</h1>
+<p class="font-headline-md italic text-white/90 leading-relaxed max-w-2xl">
+                    A crossroads of European sensibility where grand Flemish heritage meets the quiet luxury of contemporary Ixelles.
+                </p>
+</div>
+</section>
+<!-- Breadcrumb Strip -->
+<section class="bg-surface-container-low py-4 border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-8 flex justify-between items-center">
+<nav class="text-label-caps text-on-surface-variant">
+<a class="hover:text-primary" href="#">Cities</a>
+<span class="mx-2">›</span>
+<span class="text-primary">Brussels</span>
+</nav>
+<span class="text-label-caps text-on-surface-variant italic">23 companions in Brussels</span>
+</div>
+</section>
+<!-- Editorial Article -->
+<article class="max-w-[720px] mx-auto py-24 px-6">
+<p class="font-body-lg text-on-surface leading-relaxed drop-cap mb-8">
+                Brussels reads quietly for a capital. Beneath the city's official polish — the EU institutions, the diplomatic quarters, the carefully framed Grand Place — runs a more candid Brussels: the late-night light spilling from Saint-Gilles cafés, the slow conversations of the Marolles, the considered social rhythms of Ixelles. It's a city that rewards companions who can move between its registers — French at lunch, Dutch in the evening, English when it serves — and who treat discretion as a kind of fluency.
+            </p>
+<p class="font-body-lg text-on-surface-variant leading-relaxed mb-8">
+                The companions who choose to live and work in Brussels tend to share a certain cosmopolitanism. Many are multilingual; many have travelled. Many have made the city their home not for its scale but for its restraint. Brussels offers the European sensibility that other capitals only impersonate: a preference for quiet rooms, considered company, and evenings that don't need explaining the next morning.
+            </p>
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                Our verified independent providers in Brussels span the city's most-loved neighbourhoods — Ixelles and Saint-Gilles for the bohemian, Uccle and Woluwe for the residential calm, the Centre and Sablon for the civic and the storied. Filter by language, by availability, or by neighbourhood. Or read on, and explore the city as we see it.
+            </p>
+</article>
+<!-- Neighbourhoods -->
+<section class="max-w-container-max mx-auto py-24 px-8">
+<div class="max-w-[720px] mb-16">
+<p class="text-label-caps text-on-surface-variant mb-4 tracking-[0.2em]">BRUSSELS · NEIGHBOURHOODS</p>
+<h2 class="font-headline-xl text-primary mb-4">The Brussels neighbourhoods</h2>
+<p class="font-body-lg text-on-surface-variant italic leading-relaxed">
+                    Six districts where our independent companions are most available — each with its own register. Most companions are available across more than one area; counts reflect availability, not residence.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12 mb-16">
+<!-- Ixelles -->
+<a class="group block pt-6 border-t-2 border-[#A88B6E]" href="#">
+<h3 class="font-headline-md text-primary mb-3">Ixelles</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Bohemian and cosmopolitan, easy in three languages. Art-school cafés, slow Saturdays, considered evenings.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="text-label-caps text-on-surface-variant">14 available here</span>
+<span class="flex items-center gap-2 text-label-caps text-primary group-hover:gap-3 transition-all">
+                            View
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</a>
+<!-- Saint-Gilles -->
+<a class="group block pt-6 border-t-2 border-[#A88B6E]" href="#">
+<h3 class="font-headline-md text-primary mb-3">Saint-Gilles</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Late-light terraces, vinyl bars, the city's after-eight register. Easy-going, multilingual, unhurried.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="text-label-caps text-on-surface-variant">11 available here</span>
+<span class="flex items-center gap-2 text-label-caps text-primary group-hover:gap-3 transition-all">
+                            View
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</a>
+<!-- Schaerbeek -->
+<a class="group block pt-6 border-t-2 border-[#A88B6E]" href="#">
+<h3 class="font-headline-md text-primary mb-3">Schaerbeek</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Atelier streets and quiet courtyards. Less polished than the centre, more honest for it.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="text-label-caps text-on-surface-variant">6 available here</span>
+<span class="flex items-center gap-2 text-label-caps text-primary group-hover:gap-3 transition-all">
+                            View
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</a>
+<!-- Uccle -->
+<a class="group block pt-6 border-t-2 border-[#A88B6E]" href="#">
+<h3 class="font-headline-md text-primary mb-3">Uccle</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Residential, leafy, discreet. Where Brussels exhales after work.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="text-label-caps text-on-surface-variant">5 available here</span>
+<span class="flex items-center gap-2 text-label-caps text-primary group-hover:gap-3 transition-all">
+                            View
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</a>
+<!-- Brussels Centre -->
+<a class="group block pt-6 border-t-2 border-[#A88B6E]" href="#">
+<h3 class="font-headline-md text-primary mb-3">Brussels Centre</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Storied and civic, the public Brussels. Grand Place addresses, hotel-bar evenings, brief stays.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="text-label-caps text-on-surface-variant">9 available here</span>
+<span class="flex items-center gap-2 text-label-caps text-primary group-hover:gap-3 transition-all">
+                            View
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</a>
+<!-- Sablon -->
+<a class="group block pt-6 border-t-2 border-[#A88B6E]" href="#">
+<h3 class="font-headline-md text-primary mb-3">Sablon</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Antiquarian and refined. Art galleries, Sunday markets, long lunches that turn into long afternoons.
+                    </p>
+<div class="flex items-center justify-between">
+<span class="text-label-caps text-on-surface-variant">7 available here</span>
+<span class="flex items-center gap-2 text-label-caps text-primary group-hover:gap-3 transition-all">
+                            View
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+</a>
+</div>
+<!-- Also available in -->
+<div class="border-t border-outline-variant pt-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+<div class="max-w-[640px]">
+<p class="text-label-caps text-on-surface-variant mb-3 tracking-[0.2em]">ALSO AVAILABLE IN</p>
+<p class="font-body-md text-on-surface leading-relaxed">
+<a class="hover:text-primary border-b border-outline-variant hover:border-primary transition-colors" href="#">Etterbeek</a> ·
+                        <a class="hover:text-primary border-b border-outline-variant hover:border-primary transition-colors" href="#">Woluwe-Saint-Lambert</a> ·
+                        <a class="hover:text-primary border-b border-outline-variant hover:border-primary transition-colors" href="#">Woluwe-Saint-Pierre</a> ·
+                        <a class="hover:text-primary border-b border-outline-variant hover:border-primary transition-colors" href="#">Forest</a> ·
+                        <a class="hover:text-primary border-b border-outline-variant hover:border-primary transition-colors" href="#">Watermael-Boitsfort</a> ·
+                        <a class="hover:text-primary border-b border-outline-variant hover:border-primary transition-colors" href="#">Anderlecht</a>
+</p>
+</div>
+<a class="flex items-center gap-3 text-label-caps text-primary whitespace-nowrap hover:gap-4 transition-all" href="#">
+                    View all 19 neighbourhoods
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Stats Strip -->
+<section class="bg-[#E8E0D4] py-16">
+<div class="max-w-container-max mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center">
+<span class="font-display-lg text-primary mb-2">23</span>
+<span class="text-label-caps text-on-primary-fixed-variant">companions</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-display-lg text-primary mb-2">4</span>
+<span class="text-label-caps text-on-primary-fixed-variant">languages spoken</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="font-headline-md text-primary mb-2 leading-tight">Ixelles, Saint-Gilles,<br/>Schaerbeek</div>
+<span class="text-label-caps text-on-primary-fixed-variant">Most active in</span>
+</div>
+</div>
+</section>
+<!-- Featured Rail -->
+<section class="max-w-container-max mx-auto py-24 px-8">
+<div class="mb-12">
+<h2 class="font-headline-xl text-primary mb-2">Featured in Brussels</h2>
+<p class="text-label-caps text-on-surface-variant italic">Promoted listings paid for by independent providers.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"><!-- Isabella -->
+<a class="group cursor-pointer block" href="#">
+<div class="relative aspect-[3/4] overflow-hidden mb-4 border-t-4 border-[#A88B6E]">
+<img alt="Isabella" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpEQwTpnYfTgUrtOJgyRwn_KUCGV9sGLjNhtKSADMfjZlnEld1twV6fJLpyuvESna2ADnt3P8o-5PBrFfc8HL_fe9u-EGBKdrEr0C4YYiztWHoD5N5NmW6H3FpeTxEIOskyZzXsy1t7iaR_dfHezh0WmUR5inPptC26V-Ob6fCESQjSDZCzMr2TBOH2lIgrbGP8TYmjAPH0NdzZgwkJQ9NV3AqMJeAKyvW7HwvIAk7QrjeHHDAbhHUGHWnnaVFQxvwcic5p9lvW40"/>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-md text-xl">Isabella</h3>
+<span class="w-2 h-2 bg-green-600 rounded-full"></span>
+</div>
+<p class="text-label-caps text-on-surface-variant italic">A quiet conversation in the heart of the Sablon.</p>
+</a>
+<!-- Margot -->
+<a class="group cursor-pointer block" href="#">
+<div class="relative aspect-[3/4] overflow-hidden mb-4 border-t-4 border-[#A88B6E]">
+<img alt="A woman in a tailored ivory trench coat on a cobblestone street in Brussels, bright and airy lighting." class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmJG6q6CUX4VuA1TIdTOtSGnlOCc5gmDJDAg9To7Rd-WlpEr_8iwkYHLX72nIXSo3dY_sGCyA1L_5ZPZTReJRw7E4eRqBeJAQhQiBICWTlOkPRk7nab4VQPP0SGVcv5mFNtU-zGJiiy6OcuCYxGlw6_RS1pEdahaEGMAJ4MeP4ki7vjGmlLd4GajfaBBAZg0rMj1JdZklt4vphtAvfoRU2gpkXXQFPRxwDyklNfM57dWhlCFZ2MOZk0ZkXdAHDBuPNGaYF9HfnR9I"/>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-md text-xl">Margot</h3>
+<span class="w-2 h-2 bg-green-600 rounded-full"></span>
+</div>
+<p class="text-label-caps text-on-surface-variant italic">Refined company for unhurried afternoons in Ixelles.</p>
+</a>
+<!-- Sasha -->
+<a class="group cursor-pointer block" href="#">
+<div class="relative aspect-[3/4] overflow-hidden mb-4 border-t-4 border-[#A88B6E]">
+<img alt="Sasha" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4bBuab517lSu5R5hhbNTD03OtK9V3oDXswzhZ37sJVsCuOkvQmDXR7cL-NDIjWJ4snt2USgidhW22mEiB_F__RBWtew_IP0e2m-X3QZad8EBqpGo7KrYUGBdUvDRbSe7POEIatC_UqQYVjs4mI08AWbXhYY0Ub-W0SXA37I3TygJoPZAmimhJE-phbcW8luyiyuc_t21CFff0iRCNw_XOZnyysKIkZkkP5eZNkVL5Srj4nDHGFO-7nStc1xBpuhlh3VsksUIGE3Q"/>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-md text-xl">Sasha</h3>
+</div>
+<p class="text-label-caps text-on-surface-variant italic">Cosmopolitan elegance with a touch of Saint-Gilles charm.</p>
+</a>
+<!-- Théo -->
+<a class="group cursor-pointer block" href="#">
+<div class="relative aspect-[3/4] overflow-hidden mb-4 border-t-4 border-[#A88B6E]">
+<img alt="Théo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMPLNHf2VdeQMGpW9nfwk7VTOmxvHpVGiT4XoByjdVu4LYUvxrckf26SdPNI-fOw9GKnOVlpFu5brdzJ0I_NeTCLhpC7_WyuaOhxsyw7fcF644zq3sX_37PVlaXqH4baidqyP7Fz0TywshVvReIjFgyVfOSshoUVg7YpRt_EgOaHnkriYHSq7lK8bZCYmfa32E1sL7fQJzrosxUZVCNG1609qOxpbyntQvz4fB8GmVag2I3_1Tbavf0l3HDnwaW7O9yLxZ6X1R0t0"/>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-md text-xl">Théo</h3>
+<span class="w-2 h-2 bg-green-600 rounded-full"></span>
+</div>
+<p class="text-label-caps text-on-surface-variant italic">Considered company for the city's diplomatic quarters.</p>
+</a></div>
+</section><!-- Editorial Pull-Quote -->
+<section class="bg-[#3D3530] py-32 px-8">
+<div class="max-w-3xl mx-auto text-center">
+<span class="block w-12 h-px bg-[#A88B6E] mx-auto mb-10"></span>
+<p class="font-headline-xl italic text-[#FDF9F3] leading-snug">
+      Brussels rewards companions who treat discretion as a kind of fluency.
+    </p>
+</div>
+</section>
+<!-- Map Preview -->
+<section class="relative h-[480px] w-full bg-[#F1EDE7] overflow-hidden">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover grayscale brightness-110 contrast-75" data-alt="A stylized, minimalist architectural map view of Brussels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdOQrw3qpngWw5Mwbi_3TDbNseyPfnalNdh13rciSqbF7njfGAG8rXKgbvLL6oF3kQqgufOnfmtNae2YzFg2shDJplT7tUBZBoXNSpRMSOo3aGoH-J6X-oNau_Pj0-uPoyXcdVORas4COICjeGV2lFyRJJPED_3CJClqbmJWyzQ76hMISYLx1PY6Gq9f7BaI9xohvPPVhCRDhu96yernTePDLAFZWjjbmLNtcMo1GaicAgCxLOWgCOGXU_pi6yN55RgwScyWIqeng"/>
+</div>
+<!-- Radius Circles -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="relative w-[800px] h-[400px]">
+<div class="absolute top-[20%] left-[45%] w-16 h-16 bg-[#A88B6E]/20 rounded-full blur-md"></div>
+<div class="absolute top-[35%] left-[55%] w-12 h-12 bg-[#A88B6E]/30 rounded-full blur-md"></div>
+<div class="absolute top-[50%] left-[40%] w-20 h-20 bg-[#A88B6E]/15 rounded-full blur-lg"></div>
+<div class="absolute top-[60%] left-[50%] w-14 h-14 bg-[#A88B6E]/25 rounded-full blur-md"></div>
+<div class="absolute top-[25%] left-[30%] w-10 h-10 bg-[#A88B6E]/20 rounded-full blur-sm"></div>
+<div class="absolute top-[70%] left-[45%] w-24 h-24 bg-[#A88B6E]/10 rounded-full blur-xl"></div>
+</div>
+</div>
+<button class="absolute bottom-12 right-12 bg-primary text-white px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform flex items-center gap-3">
+<span class="text-label-caps font-bold">View all 23 on the map</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</section>
+<!-- Browse CTA Strip -->
+<section class="bg-[#E8E0D4] py-24 text-center">
+<h2 class="font-headline-xl text-primary mb-10">See all companions in Brussels</h2>
+<button class="bg-[#3D3530] text-white px-12 py-5 text-label-caps tracking-[0.2em] hover:bg-black transition-colors shadow-lg shadow-[#3D3530]/10">
+                Browse the Brussels directory
+            </button>
+</section><!-- Also in Belgium -->
+<section class="bg-surface-container-low py-24 px-8">
+<div class="max-w-container-max mx-auto">
+<div class="max-w-[720px] mb-16">
+<p class="text-label-caps text-on-surface-variant mb-4 tracking-[0.2em]">ALSO IN BELGIUM</p>
+<h2 class="font-headline-xl text-primary mb-4">Five more cities, five more registers</h2>
+<p class="font-body-lg text-on-surface-variant italic leading-relaxed">
+        Each Belgian city has its own rhythm. Read on for the rest of the country as we see it.
+      </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+<!-- Antwerp -->
+<a class="group block" href="/cities/antwerp">
+<div class="relative aspect-[4/5] overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Atmospheric editorial photograph of Antwerp at golden hour. The Cathedral of Our Lady spire emerges from a soft mist over the Schelde river. The lighting is low-key and cinematic, emphasising the warm glow of historic stone and the cool blue-grey of the river. The overall palette uses deep charcoals, warm taupes, and the soft amber of late afternoon light. Cereal Magazine editorial style — refined, unhurried, premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvCQ9ETTlx-g8X-crv5MA_htaVq8VSyfqXwhnYixAthn0JKUye2n-O76hG4MpgFZlMWfwv9mqd9zv7WABxhUoY87Q4j3eabKvTNb7vj3X0jkMtoQtTawuQdVg_l2N-q5vgdZwe7mCiSplzUgb8M3qsk4RO_5p7dkkqKrDqE_ZNjtLT5T792rXeAEomD_ixLED_PBb-bWvIlHO-ddMfL0X-JfbYnHnTBMr2r8MVDYWJjUXPTj1ecV0mMAZQ_e477Z7ehMNDI-8-L9M"/>
+</div>
+<p class="text-[10px] text-on-surface-variant mb-2 tracking-[0.25em] uppercase">City Guide</p>
+<h3 class="font-headline-md text-primary mb-2 text-xl">Antwerp</h3>
+<p class="font-body-md italic text-on-surface-variant text-sm leading-relaxed">
+          Diamond merchants, fashion mavericks, the port's confident swagger.
+        </p>
+</a>
+<!-- Ghent -->
+<a class="group block" href="/cities/ghent">
+<div class="relative aspect-[4/5] overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Atmospheric editorial photograph of Ghent's Graslei waterfront at dusk. Medieval guild houses reflect in still canal water. The lighting is moody and warm, with the soft glow of streetlamps just beginning to illuminate the stone facades. The palette is dominated by warm beige stone, deep navy water, and the soft amber of evening light. Editorial premium aesthetic — quiet, considered, lived-in." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJJVn63s8FfFkYajd5vpKfrAOnMOXsPyYJ8KTW271_1AyQJJbPQjY3LnO6iJZzyuGgNDlnRprhdA1_cyJv-Py4vjTXilUc84jsNMtlgn0WsO_zC3EZBD3koyqNa3Hh3rwiubJ-VcG_3uMzDgPokD1ZMPYvgAdnAOdweu8-w3-7fX9VgudfpTvZXzDhPmgZgAWbbiaRyZqyRnUjv3PaSDiFYq20RttQBi6xk_dYfs5Uixw2Sxhj3YD3WW7_RrGGF9gikgQYhWQFkag"/>
+</div>
+<p class="text-[10px] text-on-surface-variant mb-2 tracking-[0.25em] uppercase">City Guide</p>
+<h3 class="font-headline-md text-primary mb-2 text-xl">Ghent</h3>
+<p class="font-body-md italic text-on-surface-variant text-sm leading-relaxed">
+          University light and canal calm — quieter than Bruges, livelier than Brussels.
+        </p>
+</a>
+<!-- Liège -->
+<a class="group block" href="/cities/liege">
+<div class="relative aspect-[4/5] overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Atmospheric editorial photograph of Liège's Meuse riverfront. Grand 19th-century architecture captured in soft morning light, with the river creating a calm reflective foreground. The lighting is bright but diffused, with hints of cool morning mist. Palette uses warm sandstone, cool slate, and the soft silver of overcast Walloon light. Editorial magazine photography — confident, slightly grand, unmistakably Belgian." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ORXvbwkw7bamzAnw_vXsDJnKKgs8n_Ojo8GUuAAayaEBHDERhsYAck-EGujo4Fwp_W1voxk2o5S8BfiFY40FzZgMiTfamOSidFPWX-95aZSbJqyPCtvKYI4DkXekWIAKE8arKrskqdx4OJk3389htE5nPZAE6xsDFKOZfuTD3x6PkfDCcU94Bp6RAUJZmXW1tKRSnt_80d-HSKgB0jxH00EgQIIlLWvoRVwf-ihvEA1CmhQb8-ntWeWYoX4J63plKuuFAMuxUOI"/>
+</div>
+<p class="text-[10px] text-on-surface-variant mb-2 tracking-[0.25em] uppercase">City Guide</p>
+<h3 class="font-headline-md text-primary mb-2 text-xl">Liège</h3>
+<p class="font-body-md italic text-on-surface-variant text-sm leading-relaxed">
+          Walloon warmth, riverside grandeur, a city that talks back.
+        </p>
+</a>
+<!-- Bruges -->
+<a class="group block" href="/cities/bruges">
+<div class="relative aspect-[4/5] overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Atmospheric editorial photograph of a Bruges canal at first light. Mist hovers above the water; medieval houses lean toward the canal in soft focus. A single small stone bridge crosses in the foreground. The lighting is dawn-soft, almost monochromatic, in cool ivory and warm taupe tones. Mood is hushed, storybook, deliberately quiet. Cereal Magazine or Kinfolk style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7CJnMhCoQdomDscHNUWqZpDuCjzPuM36gaMreBmvbNGIkh1lbtw1m4zfbVXFhUEftimY1oGO5lwpZAoPOosfo7rICGIpWurqcK0ZFW4f3XdcEiGfCmE3Jn53ccyXY0yKI3oq39K8s1eJ9liUH3uvpiA-ACHfcHwjHo4A-hIQzkCMginpmNcNW7A3Iwz6qW7CV7L_ZVRR1rvF7g5f9UdLl736m2VcqBPcRHNkhK5yhrQfJIk5uyfXAKJVEjtHWPVNndLFZXNhxw9A"/>
+</div>
+<p class="text-[10px] text-on-surface-variant mb-2 tracking-[0.25em] uppercase">City Guide</p>
+<h3 class="font-headline-md text-primary mb-2 text-xl">Bruges</h3>
+<p class="font-body-md italic text-on-surface-variant text-sm leading-relaxed">
+          Storybook canals, slow afternoons, evenings that read like postcards.
+        </p>
+</a>
+<!-- Charleroi -->
+<a class="group block" href="/cities/charleroi">
+<div class="relative aspect-[4/5] overflow-hidden mb-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Atmospheric editorial photograph of Charleroi's reinvented industrial centre. A converted warehouse façade with contemporary metal-and-glass intervention captured at golden hour. The lighting is warm and confident, emphasising the contrast of old brick and new architecture. Palette uses warm rust, deep charcoal, and the amber of late afternoon light. Mood is post-industrial premium — the city's contemporary side, not its tourist face." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrVQa7FXlhAIxv9U60qdGrpJfTMcCEJPLeOA41hsqMkre3MhD9qEHIm8ze8A27f0oKsoP5nWgQhU5UeRFHQ2jMPW70k6CkTupRDE-ERPwQhfWWr46bca-i3eDkmMtihiba80ju2m2N7eKVlxCfWVP8rRAyqcfahH7xUGt1oegAkKpPLSQYGylnOo9gEAV0QF_8kcWdTaUAmTZCZyPlbxGj6Xy6zVHUmC5xyvBjQH887eX1Ua7a_Lw3BHorbkgtb4h5Hml8oPUjvpA"/>
+</div>
+<p class="text-[10px] text-on-surface-variant mb-2 tracking-[0.25em] uppercase">City Guide</p>
+<h3 class="font-headline-md text-primary mb-2 text-xl">Charleroi</h3>
+<p class="font-body-md italic text-on-surface-variant text-sm leading-relaxed">
+          Industrial bones, contemporary soul — Belgium's most reinvented city.
+        </p>
+</a>
+</div>
+</div>
+</section>
+<!-- Safeguarding Section -->
+<section class="max-w-[720px] mx-auto py-24 px-6 border-t border-outline-variant">
+<h2 class="font-headline-md text-primary mb-6">Safeguarding &amp; support</h2>
+<p class="font-body-md text-on-surface-variant mb-10 leading-relaxed">
+                We are committed to the safety and well-being of all members of our community. If you or someone you know is in need of support, specialized organizations are available to provide confidential assistance in Belgium and across Europe.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<a class="flex items-center gap-4 group p-4 -ml-4 hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">verified_user</span>
+<div>
+<p class="font-headline-md text-base">PAG-ASA</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Specialist support centre</p>
+</div>
+</a>
+<a class="flex items-center gap-4 group p-4 -ml-4 hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">support_agent</span>
+<div>
+<p class="font-headline-md text-base">Payoke</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Advocacy &amp; social help</p>
+</div>
+</a>
+<a class="flex items-center gap-4 group p-4 -ml-4 hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">emergency_home</span>
+<div>
+<p class="font-headline-md text-base">Sürya</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Safe accommodation</p>
+</div>
+</a>
+<a class="flex items-center gap-4 group p-4 -ml-4 hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">public</span>
+<div>
+<p class="font-headline-md text-base">EU helpline</p>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Regional support network</p>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant py-20 px-8 lg:px-20">
+<div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-6 gap-12 mb-20">
+<div class="col-span-2">
+<span class="text-2xl font-headline-xl italic text-primary block mb-6">Courtly</span>
+<p class="text-body-md text-on-surface-variant max-w-xs mb-6">
+                    A curated advertising directory for independent companions across Belgium.
+                </p>
+<div class="flex items-center gap-3 text-label-caps text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">FR</a>
+<span class="opacity-30">·</span>
+<a class="hover:text-primary transition-colors" href="#">NL</a>
+<span class="opacity-30">·</span>
+<a class="text-primary font-bold" href="#">EN</a>
+<span class="opacity-30">·</span>
+<a class="hover:text-primary transition-colors" href="#">DE</a>
+</div>
+</div>
+<div>
+<h4 class="text-label-caps text-primary mb-6">Browse</h4>
+<ul class="space-y-3 text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Companions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Brussels</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Antwerp</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Ghent</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Liège</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Charleroi</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bruges</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Featured companions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Available now</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-caps text-primary mb-6">For providers</h4>
+<ul class="space-y-3 text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Apply as a provider</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Provider login</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Verification process</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Provider help</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-caps text-primary mb-6">Trust &amp; safety</h4>
+<ul class="space-y-3 text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">About Courtly</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">How we verify</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Editorial values</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Report a concern</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Safeguarding &amp; anti-trafficking</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Transparency reports</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-caps text-primary mb-6">Legal</h4>
+<ul class="space-y-3 text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Settings</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Acceptable Use Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Imprint / Mentions légales</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">DSA point of contact</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto pt-12 border-t border-outline-variant space-y-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<p class="text-[10px] uppercase tracking-[0.3em] text-on-surface-variant leading-relaxed">
+                    USERS MUST BE 18+ TO ACCESS THIS SITE. PLEASE CONSULT LOCAL LAWS IN YOUR JURISDICTION. THIS WEBSITE IS A CURATED ADVERTISING PLATFORM.
+                </p>
+</div><div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<p class="text-xs italic text-on-surface-variant leading-relaxed max-w-3xl">
+      Courtly is an adult advertising directory for independent providers. Courtly does not arrange bookings, collect client payments, process deposits, or act as an agency.
+    </p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<p class="text-label-caps text-on-surface-variant opacity-60">
+                    Copyright © 2026 Courtly. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

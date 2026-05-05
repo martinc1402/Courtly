@@ -1,0 +1,688 @@
+<html class="light" lang="en"><head></head><body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">```html
+
+
+    <meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Courtly | Curated Companionship across Belgium</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#f7f3ed",
+                    "surface-container-high": "#ebe8e2",
+                    "surface-container": "#f1ede7",
+                    "outline": "#7d766f",
+                    "on-secondary-container": "#6c625d",
+                    "surface-variant": "#e6e2dc",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#d1c4bd",
+                    "secondary-fixed": "#eee0d8",
+                    "surface-bright": "#fdf9f3",
+                    "on-primary-fixed-variant": "#4b4641",
+                    "on-primary-fixed": "#1f1b17",
+                    "on-error": "#ffffff",
+                    "secondary": "#665c57",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f4f0ea",
+                    "primary-container": "#2a2622",
+                    "on-surface": "#1c1c18",
+                    "tertiary": "#14120b",
+                    "on-secondary-fixed-variant": "#4e4540",
+                    "surface-dim": "#ddd9d4",
+                    "inverse-primary": "#cdc5bf",
+                    "on-tertiary-container": "#938d82",
+                    "on-surface-variant": "#4c463f",
+                    "surface-container-highest": "#e6e2dc",
+                    "primary": "#15110e",
+                    "on-tertiary-fixed": "#1e1b14",
+                    "tertiary-fixed": "#e9e1d5",
+                    "surface": "#fdf9f3",
+                    "inverse-surface": "#31302d",
+                    "on-primary-container": "#938d87",
+                    "primary-fixed": "#eae1da",
+                    "tertiary-fixed-dim": "#cdc6ba",
+                    "surface-tint": "#635d58",
+                    "background": "#fdf9f3",
+                    "outline-variant": "#cfc5bc",
+                    "tertiary-container": "#2a261e",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-background": "#1c1c18",
+                    "on-tertiary-fixed-variant": "#4b463e",
+                    "primary-fixed-dim": "#cdc5bf",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "secondary-container": "#eee0d8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#211a16"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Noto Serif"],
+                    "label-caps": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-xl": ["Noto Serif"],
+                    "headline-md": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "body-lg": ["1.125rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "label-caps": ["0.75rem", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["3rem", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "headline-md": ["2rem", {"lineHeight": "1.3", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 30px -15px rgba(61, 53, 48, 0.08);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<header class="bg-[#F7F3ED] border-b border-[#D9D4D0] fixed top-0 w-full z-50 h-[56px] flex items-center">
+<div class="flex justify-between items-center px-8 w-full max-w-screen-2xl mx-auto h-full">
+<div class="flex items-center gap-6">
+<button aria-label="Menu" class="md:hidden text-[#2A2622]">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex items-center gap-8">
+<a class="text-2xl font-serif font-light tracking-tighter text-[#2A2622]" href="/">Courtly</a>
+<nav class="hidden md:flex items-center gap-[24px] font-serif text-[15px] text-[#2A2622]">
+<a class="hover:opacity-70 transition-opacity" href="#">Companions</a>
+<a class="hover:opacity-70 transition-opacity" href="#">Cities</a>
+<a class="hover:opacity-70 transition-opacity" href="#">About</a>
+</nav>
+</div>
+</div>
+<div class="flex items-center gap-[16px]">
+<div class="hidden lg:flex items-center gap-[24px] font-sans text-[13px] text-[#6B6258]">
+<a class="hover:text-[#2A2622] transition-colors" href="#">Provider login</a>
+<a class="border border-[#2A2622] px-3 py-1.5 rounded-[8px] text-[#2A2622] hover:bg-[#2A2622] hover:text-white transition-all" href="#">Apply as a provider</a>
+<div class="relative group">
+<button class="flex items-center gap-1.5 text-[#2A2622] font-semibold hover:opacity-70 transition-opacity">
+<span>EN</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<!-- Language Dropdown -->
+<div class="absolute right-0 top-full mt-2 w-24 bg-[#fdf9f3] border border-outline-variant rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 py-2">
+<a class="block px-4 py-1.5 hover:bg-surface-container text-[#6B6258] hover:text-[#2A2622]" href="#">FR</a>
+<a class="block px-4 py-1.5 hover:bg-surface-container text-[#6B6258] hover:text-[#2A2622]" href="#">NL</a>
+<a class="block px-4 py-1.5 hover:bg-surface-container text-[#2A2622] font-semibold" href="#">EN</a>
+<a class="block px-4 py-1.5 hover:bg-surface-container text-[#6B6258] hover:text-[#2A2622]" href="#">DE</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-[56px]">
+<!-- Hero Section -->
+<section class="h-[520px] bg-surface flex items-center overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-8 w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="space-y-3">
+<h1 class="font-headline-xl text-on-surface leading-tight">Curated companionship across Belgium.</h1>
+<p class="font-body-lg text-on-surface-variant max-w-md">Independent, verified providers in Brussels, Antwerp, Ghent, Liège and beyond.</p>
+<div class="relative mt-8">
+<div class="flex flex-col sm:flex-row items-center gap-0 bg-surface-container-low p-3 rounded-lg border border-outline-variant max-w-2xl w-full shadow-sm">
+<div class="flex items-center gap-3 px-4 flex-1 w-full border-b sm:border-b-0 sm:border-r border-outline-variant py-2">
+<span class="material-symbols-outlined text-outline">location_on</span>
+<input class="bg-transparent border-none focus:ring-0 font-body-lg text-on-surface w-full p-0" placeholder="City or postcode" type="text" value="Brussels"/>
+</div>
+<div class="flex items-center gap-3 px-4 w-full sm:w-auto py-2 border-b sm:border-b-0 sm:border-r border-outline-variant">
+<span class="text-xs font-label-caps text-outline-variant uppercase">within</span>
+<select class="bg-transparent border-none focus:ring-0 font-body-md text-on-surface cursor-pointer p-0 pr-8">
+<option>5km</option>
+<option>10km</option>
+<option selected="">25km</option>
+<option>50km</option>
+<option>Anywhere</option>
+</select>
+</div>
+<div class="p-1.5 w-full sm:w-auto">
+<button class="w-full sm:w-auto px-10 py-4 bg-[#2A2622] text-on-primary font-label-caps uppercase text-xs tracking-widest rounded transition-all hover:opacity-90">
+                                    Explore
+                                </button>
+</div>
+</div>
+<!-- Mock Autocomplete -->
+<div class="absolute left-0 right-0 top-full mt-1 bg-surface-container-lowest border border-outline-variant rounded-lg shadow-xl z-10 max-w-2xl overflow-hidden hidden md:block">
+<div class="px-4 py-2 bg-surface-container-high border-b border-outline-variant">
+<span class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-wider">Suggested locations</span>
+</div>
+<div class="divide-y divide-outline-variant/30">
+<button class="w-full text-left px-4 py-3 hover:bg-surface-container-low flex items-center gap-3 group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary">location_on</span>
+<span class="font-body-md text-on-surface">1050 — <span class="font-semibold">Ixelles</span></span>
+</button>
+<button class="w-full text-left px-4 py-3 hover:bg-surface-container-low flex items-center gap-3 group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary">location_on</span>
+<span class="font-body-md text-on-surface">1000 — <span class="font-semibold">Brussels Centre</span></span>
+</button>
+<button class="w-full text-left px-4 py-3 hover:bg-surface-container-low flex items-center gap-3 group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary">location_on</span>
+<span class="font-body-md text-on-surface">1030 — <span class="font-semibold">Schaerbeek</span></span>
+</button>
+<button class="w-full text-left px-4 py-3 hover:bg-surface-container-low flex items-center gap-3 group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary">location_on</span>
+<span class="font-body-md text-on-surface">2000 — <span class="font-semibold">Antwerp Centrum</span></span>
+</button>
+<button class="w-full text-left px-4 py-3 hover:bg-surface-container-low flex items-center gap-3 group">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary">location_on</span>
+<span class="font-body-md text-on-surface"><span class="font-semibold">Bruges</span></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden md:block h-[420px] relative">
+<img alt="Editorial interior" class="absolute inset-0 w-full h-full object-cover rounded-lg editorial-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARDeGokVSmCnbdNBqkzCPxAETu403g0r9VspqiB2LgJ8EyxawdfYOET9vWM36wasQdiZ2Xykt4lHVjj5NomO2e8kYfJD1VNr49a_XzdP1LX0AzuswAePGVcHDiewMfMevmPgk0L2tRmnkr8veZilyj-xhe9zjIdzjkIxytEhOv_jxnHCXFHAt5b0mLLivhTcgBYq5h-rCj8-5awnn7UBBhuqAGpipHd9eHQjCpkUpc3-2Hhrc2MAn8cvKATKrE_I_bVCOde7sm1kg"/>
+</div>
+</div>
+</section>
+<!-- City Tile Row -->
+<section class="max-w-screen-2xl mx-auto px-8 py-16">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden rounded-lg mb-3">
+<img alt="Brussels" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaltAr5MdeMaFPsve0GOJfpqFJ9rnSpBZoZzCiYol5jkrb91XNRYo8rshwG_DU_nOF9QyfNcATYoKCB1UTo_vJlu-04cDsOCZVd6TzhZ6GqdEZstaUUcc8qMi6PJJ-xOavfU_zvK2BVXDZ-QS1MQNWo2m03axCFEEMo8UnWQEqNcZFTs2_tc_CnoN4MsWft_C54EFYMRQHPuvIoLSe4uqzSlPWIxzH1KUYRK0FnDWPP266Pj-EXDRAbcmXmxUKj_tPeOjjPvj0Zyc"/>
+</div>
+<h3 class="font-headline-md text-lg leading-none mb-1">Brussels</h3>
+<p class="font-body-md text-xs text-on-surface-variant uppercase tracking-widest">23 providers</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden rounded-lg mb-3">
+<img alt="Antwerp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvh9e1QJS6eQQu7lsM3_RxMN3iPoBYLVoERQiIAmrHi8VwgNDuzGj9JSbcwVabpvep2n0lnb1iAT0S8fjBzK1fHvIW9LsbGCMRpSFfSJ8eGtkJFSFfJ3pCsiea3WuCvo7akPfmbnrie5ZmoAVVU_W7o3JyrL0rrWDsbRVKvqd-ZrP0CnQEjVRmazwgRlgGkDz0rzhylx1svLrLt8EXmV0jTkwo_L7MpDg8kjjsrAeiQvzkYbRpjlqzqs1OoDtq9OVsGtw5-A9pDb4"/>
+</div>
+<h3 class="font-headline-md text-lg leading-none mb-1">Antwerp</h3>
+<p class="font-body-md text-xs text-on-surface-variant uppercase tracking-widest">18 providers</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden rounded-lg mb-3">
+<img alt="Ghent" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnQ9mczUcxKi33kOU5gngHiq_kZ3PPbiQY3k2KRWEiylAy4Mu0aUQXQJlHjlps4uBUTc1PeWQLvlG6Kr01-LenoL-V_Sxr5HVEJBqSY6D27WmFYMIpKGjdtdVXmHmccdadbDFnx3u_Kj7sHLq6TkDjPGY7hL31w7JWaGvSOilMDZJ2QpMsv9kl2-iTARrYiislMZm0cwvKEHOXLq92blHN1d-L4D-A7CMQoEjBstFKWzOIDQfKd4yPGtCCLgYrlxW2cFgFalcW_ek"/>
+</div>
+<h3 class="font-headline-md text-lg leading-none mb-1">Ghent</h3>
+<p class="font-body-md text-xs text-on-surface-variant uppercase tracking-widest">12 providers</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden rounded-lg mb-3">
+<img alt="Liège" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrXMMaOchRqsbVelU5MYinHmzn9EXNuS8AptpZ_hCfd3OkD09i5W5n7AcMDSc-ojS_uj861Xp9wkCRFudeVit9-zvPqMniiTIhnmr0ikZ3CJwPFNPJG1zjE6hwoFQJLPDWJuToEJSs9JKEbD3vfMUDnp7a_tZ_K_1qcsOFUawjfm2vi2lTA0po8NCrLwjjc3Y8Z7HkLSaQTVqNd9KznUIxRKXi9VdtEMD76vQCRYd1MyaMMDJSwN8TswqqFMX-Nu3zwJpT8L1sEAc"/>
+</div>
+<h3 class="font-headline-md text-lg leading-none mb-1">Liège</h3>
+<p class="font-body-md text-xs text-on-surface-variant uppercase tracking-widest">9 providers</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden rounded-lg mb-3">
+<img alt="Charleroi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ8DU8Deo7SLCnvofSwbe4gu6pBRjrgSzEXowJ2iB6vZNE4fWP3tLHZN0qIhoRvG80ztvoiv86KRjzyHevkf9urIThXZjBCwUGePq7O77fEFax2tvDQCl-4ikyY0I4NAkP7b0-QNq6jfZsDyT7OppXQKATg1sTHTmOX4Ps6m_K2FRVSu_AU_VNoxX8FpC82vhmQzKtzd5q7HTDSY0lgPjIdh1ogy24E8KIosPZbm44Ehg410NbnzS7gIhyYKBZi2S1yDwMLv6PBQs"/>
+</div>
+<h3 class="font-headline-md text-lg leading-none mb-1">Charleroi</h3>
+<p class="font-body-md text-xs text-on-surface-variant uppercase tracking-widest">7 providers</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden rounded-lg mb-3">
+<img alt="Bruges" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB--JSVnn9f9qE16ral18rtnNKyj_evq3mU-BwbpRT5lYRE-0I8LfQl4xvOtsrd_DpmTNOIxxnELJerpp9d1-i4lGfCnlAgLcozYOqSA-6RX89Gty3t7ENZGeZSCS2ltCMgOl2-9LTz2dLIkL-vAuVI5vZTFGuLBufnkgbU8kCGFIYS9zgXyEtFp8EMa1Ktcdtz6SGQl6_DY_r6tSQOesOBq4exoAIMFFAUrowxK8I03ypH_n3apJ3N6wxKS028eyCbhZ65RYQLjj0"/>
+</div>
+<h3 class="font-headline-md text-lg leading-none mb-1">Bruges</h3>
+<p class="font-body-md text-xs text-on-surface-variant uppercase tracking-widest">14 providers</p>
+</div>
+</div>
+</section>
+<!-- Chip Strip -->
+<section class="border-y border-outline-variant bg-surface-container-lowest">
+<div class="max-w-screen-2xl mx-auto px-8 py-6">
+<div class="overflow-x-auto flex gap-3 scrollbar-hide md:flex-wrap">
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Available today</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Recently active</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Photo verified</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Speaks FR</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Speaks NL</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Speaks EN</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Speaks DE</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Couples &amp; duos</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Female</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Male</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Non-binary</a>
+<a class="whitespace-nowrap px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps text-[10px] uppercase tracking-widest hover:bg-surface-container-high transition-colors" href="#">Trans</a>
+</div>
+</div>
+</section>
+<!-- Featured companions Rail -->
+<section class="max-w-screen-2xl mx-auto px-8 py-20">
+<div class="mb-10">
+<h2 class="font-headline-md text-[24px]">Featured companions</h2>
+<p class="font-body-md text-on-surface-variant text-sm">Promoted listings paid for by independent providers.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Card: Isabella -->
+<div class="group cursor-pointer border-t-[3px] border-[#A88B6E] pt-4">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Isabella" class="w-full h-full object-cover grayscale-[10%] group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbWpj4Rhq9nZieL-ZX2tQKmy8M9HAgiOQnMLmROVOjKoi5Qbrjs5R2Wlbl7HCPVZch3UHVNbdngIsoVLZsCsjFH8UquJLJUAHbOzsgy2KCgjKjOHjYXrPLnwAtLJovYA0llLmiQGeANriEIFJAh_R5sj7vRkwm_8oMJC8hFF8FaPMgq1iAo09xfRmmq7_pgn0dpwQcx-iz5n2zqFjYJbNFtEoI8QOBtfPZlKZbnC1rWpMMlDaalHAw0zk5iQbPcp34JUxOlm0zq1M"/>
+<div class="absolute top-3 left-3">
+<span class="bg-[#FDF9F3] text-on-surface text-[10px] font-label-caps px-2 py-1 rounded">FEATURED</span>
+</div>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 backdrop-blur-sm text-[10px] font-label-caps px-2 py-1 rounded border border-outline-variant text-on-surface">€€€</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<h4 class="font-headline-md text-[17px]">Isabella</h4>
+<span class="text-xs text-on-surface-variant">· Brussels</span>
+</div>
+<div class="flex flex-wrap gap-2 items-center">
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-[#6B6258]">Recently active</span>
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-on-surface-variant">Photo verified</span>
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-on-surface-variant">FR/NL/EN</span>
+</div>
+<p class="font-headline-md italic text-[14px] text-on-surface-variant leading-tight pt-1">Soft-spoken art curator.</p>
+</div>
+</div>
+<!-- Card: Camille -->
+<div class="group cursor-pointer border-t-[3px] border-[#A88B6E] pt-4">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Camille" class="w-full h-full object-cover grayscale-[10%] group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqouhu1_sfqwoq4UklRe8ndZPvS6Z7evUrYTN1v_17TLTGwkWS0Zg-YoM1O1MRQW_WJpAhL6NmZTeWiWybIx4ofzZxLoI23flfpbYRhpGXRNqVxihbN2HVbgHMf6cyjvBTJrEnakR5ouz_zUs5AqN1xNwnQ3vyWNeFsGTQpc8vxASJSATH2bLUIG9XECf8_zSRcpiF8PBfuyE8So5Yf__ynNdB746XapuVIpOcNRwh7HJmq45OQoohPmC-FlyLo46z3gATr7_ifkc"/>
+<div class="absolute top-3 left-3">
+<span class="bg-[#FDF9F3] text-on-surface text-[10px] font-label-caps px-2 py-1 rounded">FEATURED</span>
+</div>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 backdrop-blur-sm text-[10px] font-label-caps px-2 py-1 rounded border border-outline-variant text-on-surface">€€€</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<h4 class="font-headline-md text-[17px]">Camille</h4>
+<span class="text-xs text-on-surface-variant">· Antwerp</span>
+</div>
+<div class="flex flex-wrap gap-2 items-center">
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-[#6B6258]">Recently active</span>
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-on-surface-variant">Photo verified</span>
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-on-surface-variant">NL/EN/FR</span>
+</div>
+<p class="font-headline-md italic text-[14px] text-on-surface-variant leading-tight pt-1">Architect by training, traveller by habit.</p>
+</div>
+</div>
+<!-- Card: Margot -->
+<div class="group cursor-pointer border-t-[3px] border-[#A88B6E] pt-4">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Margot" class="w-full h-full object-cover grayscale-[10%] group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkupS3w7EiTMeRNO6CVxgT91qZOP6uZtC4L4SThyAoL-NeTKsxG7df8tEqNRvTjj7BrZMC_Jf3QOmZUjmj-hG2tGZsmzJOKU-DdqB-onVelMfe2PFQMxvAci9WU7tbgYVFCoqZ-b2Hd-sk5UlfFD_nzkVCoQRyU6j0X8rra3C9mRT5wUfsBhHEPTs4ieGsGLTNH1XJ7TGpDKl-Bf-u_xT3fZeDNBUNHeP3A2QBSHKgT21OkM7wssIO7GbJh50r_GiUI2MAs1IBrq4"/>
+<div class="absolute top-3 left-3">
+<span class="bg-[#FDF9F3] text-on-surface text-[10px] font-label-caps px-2 py-1 rounded">FEATURED</span>
+</div>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 backdrop-blur-sm text-[10px] font-label-caps px-2 py-1 rounded border border-outline-variant text-on-surface">€€€</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<h4 class="font-headline-md text-[17px]">Margot</h4>
+<span class="text-xs text-on-surface-variant">· Brussels</span>
+</div>
+<div class="flex flex-wrap gap-2 items-center">
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-[#6B6258]">Recently active</span>
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-on-surface-variant">Photo verified</span>
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-on-surface-variant">FR/NL/EN</span>
+</div>
+<p class="font-headline-md italic text-[14px] text-on-surface-variant leading-tight pt-1">Calm company for considered evenings.</p>
+</div>
+</div>
+<!-- Card: Elise -->
+<div class="group cursor-pointer border-t-[3px] border-[#A88B6E] pt-4">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Elise" class="w-full h-full object-cover grayscale-[10%] group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWPI2vJPbK2xn-wJH6yNuJ2eYK1FoR1mo5ePSAmy78vvVKM8q6VGvVvcuR6aalXDj-p4DP2mPCmq8HikebN85gFbjtRe4kKltMrCuABWyRxpUKkRs1hYDRIsucKSlXcZEo4hAVD9-rF2ggNKc_DkEb1KqZDAg1MAD5LKA_EuijEmbFN21zWCdh9jk82YAm18sc1LBAWJADb0yUrhQFepq-TSXty-22BdJnkwtEGKEesk_88VGPcMrzuU2Yi4mN0rOcoIEMaE8cqAg"/>
+<div class="absolute top-3 left-3">
+<span class="bg-[#FDF9F3] text-on-surface text-[10px] font-label-caps px-2 py-1 rounded">FEATURED</span>
+</div>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 backdrop-blur-sm text-[10px] font-label-caps px-2 py-1 rounded border border-outline-variant text-on-surface">€€€</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="flex items-baseline gap-2">
+<h4 class="font-headline-md text-[17px]">Elise</h4>
+<span class="text-xs text-on-surface-variant">· Antwerp</span>
+</div>
+<div class="flex flex-wrap gap-2 items-center">
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-[#6B6258]">Recently active</span>
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-on-surface-variant">Photo verified</span>
+<span class="text-[9px] font-label-caps uppercase tracking-tighter text-on-surface-variant">NL/FR/EN</span>
+</div>
+<p class="font-headline-md italic text-[14px] text-on-surface-variant leading-tight pt-1">Reads more than she speaks.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Available now Rail -->
+<section class="bg-surface-container-low py-20">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="font-headline-md text-[24px]">Available now</h2>
+<p class="font-body-md text-on-surface-variant text-sm">Independent providers accepting enquiries today.</p>
+</div>
+<button class="font-label-caps text-[11px] uppercase tracking-widest border-b border-on-surface pb-1">View all</button>
+</div>
+<div class="flex gap-6 overflow-x-auto scrollbar-hide pb-4">
+<!-- Sofia -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Sofia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzBmVSB7P3tUr3gSKoLI6eXsD4y0EBQxK7muyriuVFUNyDql_XYss5vpBGa5CoBLdXEMhX0fVBjtF-sp21NyeB5K2TF_cDSSDSeiT1AwK2UFKLW9TyP-CPIuu6ozAm46_wrO08asUgN9O1U9xBF1keey-m6iwFv2YINsu6nXaOth4h7zlYV7La2UaL0tWpm9MMYqKOuMhNV_Y6PzwKNYYENhhUN9Wd4SisWgt7AX4byLaYUZemOuwN4QHu7gRVftjwSSLKTi3qrLo"/>
+<div class="absolute top-3 right-3">
+<div class="w-2 h-2 rounded-full bg-[#5C8A5A]"></div>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Sofia</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Brussels · FR/EN</p>
+</div>
+<!-- Lukas -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Lukas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCetmbDE6oaxaERayT3rthF1T0jh7QTB8NrH3QiPs1seRNQDVILnDs2rgYhUUNxXEcd-bKlu49RzA-m9lOPUGF0ddjl1hwKvzRyTj3Tbh2Wpg-DWA8LqRfDekmZWdHfxoO3nQcVHeu4hMICTA396EKWwF8zo7V9s9gmfGrbeau363XBe9QnogCuNXL-AXpIK6JNpbVo26SUbEss04VBztIPJLGk0OcjjSfp-2C_WVz0A4tYgVvpWE3aZh_GwJQM7gw0BJ5SHT6yD6I"/>
+<div class="absolute top-3 right-3">
+<div class="w-2 h-2 rounded-full bg-[#5C8A5A]"></div>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Lukas</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Liège · FR/NL</p>
+</div>
+<!-- Adrien -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Adrien" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATFK8ZJdgDPrFHjsYK0fXnrORk-txipgINpOiFRDtkfZ59bBmHAYoYXwh4JBcuqUWjiea0lzGZQHN1bM3qtIVrsJ1UTcS85SqGWZlWDGqzeuDwMUyx6Ht-8BUlV_Nn-eFQ1rAGZnwY34qgXT8cgdL_uT05yntrCjtRACLw-g9vItm-LU1gcXRESewiFHDmjvFutBHLA3XXcY5K-IVyH9T6rOyERWrFT9PwaRauFhe7u-dr6a73EdI38561KLTGHhJdjgjAXX5M0mA"/>
+<div class="absolute top-3 right-3">
+<div class="w-2 h-2 rounded-full bg-[#5C8A5A]"></div>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Adrien</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Charleroi · FR/EN</p>
+</div>
+<!-- Tom -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Tom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgcryZEQ48YnptrXT7EYoicWAsLEhwqXBJweDUMLDVPwiLp_HuTN6PwEmW5HrIHnmB9rTMjMPEFLbvliQKarbm2g9Tzc6aoF4I_71z0ZPNi2KewWwB2DG9GZV4xw4neGK9u6aA98DbXh2l272Xr0PuVpah5WZme123_vXWtlmu9z2-zzV4rAXWxJWJVUEJzOvWbHGDC-tW7-MtLROqMyymhH7J-iuBFw7KicoSF2KiB2sYBQwMp9kyq0f803LBZ8F5u1b1TP_MvXk"/>
+<div class="absolute top-3 right-3">
+<div class="w-2 h-2 rounded-full bg-[#5C8A5A]"></div>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Tom</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Ghent · NL/EN</p>
+</div>
+<!-- Sasha -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Sasha" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbWpj4Rhq9nZieL-ZX2tQKmy8M9HAgiOQnMLmROVOjKoi5Qbrjs5R2Wlbl7HCPVZch3UHVNbdngIsoVLZsCsjFH8UquJLJUAHbOzsgy2KCgjKjOHjYXrPLnwAtLJovYA0llLmiQGeANriEIFJAh_R5sj7vRkwm_8oMJC8hFF8FaPMgq1iAo09xfRmmq7_pgn0dpwQcx-iz5n2zqFjYJbNFtEoI8QOBtfPZlKZbnC1rWpMMlDaalHAw0zk5iQbPcp34JUxOlm0zq1M"/>
+<div class="absolute top-3 right-3">
+<div class="w-2 h-2 rounded-full bg-[#5C8A5A]"></div>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Sasha</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Brussels · EN/RU</p>
+</div>
+<!-- Ines -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Ines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6BTic_dSztUVhk6zt7rsCQIIKK_oGIjrqi_UBw24Avs8mtEsLRULfYCSWbN4R6aNqGmxx5HOa_KE87BkGqhTAsv11cJ1lwh9e3wuznMA04zPrx6Iy3SJ79B8fbGzlsaHoe__woWHcOiz5IGTi_GuFuBfVPCsLo4UHFyoXfggzCwlp2IytHDBGUvrnlgkOR1BUu3sU3bmTCB9mKly8J615M03vKhIXdwfoOkvzrHC_HpQhzTyqJsyQRRRMCOIwnb5YYLdk8wXoKig"/>
+<div class="absolute top-3 right-3">
+<div class="w-2 h-2 rounded-full bg-[#5C8A5A]"></div>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Ines</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Antwerp · NL/EN/ES</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recently active Rail -->
+<section class="max-w-screen-2xl mx-auto px-8 py-20">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="font-headline-md text-[24px]">Recently active</h2>
+<p class="font-body-md text-on-surface-variant text-sm">Engagement and availability updated within the last hour.</p>
+</div>
+<button class="font-label-caps text-[11px] uppercase tracking-widest border-b border-on-surface pb-1">View all</button>
+</div>
+<div class="flex gap-6 overflow-x-auto scrollbar-hide pb-4">
+<!-- Julien -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Julien" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5iY2xJos37FxLhYfE6ltq-lZPhg9e6uZ58vkHuR6WCp4-3i15q_qOsf93eoL0y3-Y4vH2oRicAIQNecPgBHcgYb90qvk75wujAeA8aMWfFhXxOWgHJoYQrIEEPs8t9WCKkCO5VgHYJlHz5eu0QLQrhtBS1YlxvsNfFP4SgFp7XhFMfTvGBcxG10bffWXkNAswtcP5X4y1z43Bp49A-b7Ht8XtLTicfYjd9G8_pc8r3ZXVzOhiWlzDeQUMdt6V1iHbmuvzWuHwm5E"/>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Julien</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Antwerp · NL/EN</p>
+</div>
+<!-- Elena -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Elena" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6BTic_dSztUVhk6zt7rsCQIIKK_oGIjrqi_UBw24Avs8mtEsLRULfYCSWbN4R6aNqGmxx5HOa_KE87BkGqhTAsv11cJ1lwh9e3wuznMA04zPrx6Iy3SJ79B8fbGzlsaHoe__woWHcOiz5IGTi_GuFuBfVPCsLo4UHFyoXfggzCwlp2IytHDBGUvrnlgkOR1BUu3sU3bmTCB9mKly8J615M03vKhIXdwfoOkvzrHC_HpQhzTyqJsyQRRRMCOIwnb5YYLdk8wXoKig"/>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Elena</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Ghent · EN/FR/DE</p>
+</div>
+<!-- Mathieu -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Mathieu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQyyJ9CtErVcEd9gqmpSV3A8f8oyiJKrQtllfNTyIdcVdlSyMQgT_mDHR1VcsPh134QFbpXL1KtQz6knA1-CsK2Oi1VrIVjVSFvrIXgB8ZTne9etL9SN9c3_BFZQ6f2ykH7QgOmz2RbqzCKM2KezTd3Tig1yryOtnYM31x-sWW3eAGMUOx3SAtj_-cbYeBfReIitJutcdI520aSXGaUpGAG4ZRsmRxpIMQRD2G1vdlZz7aQ5wyRQXJ79EpwMZAxIFpsZaHMD4qyT0"/>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Mathieu</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Liège · FR/DE</p>
+</div>
+<!-- Noor -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Noor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWPI2vJPbK2xn-wJH6yNuJ2eYK1FoR1mo5ePSAmy78vvVKM8q6VGvVvcuR6aalXDj-p4DP2mPCmq8HikebN85gFbjtRe4kKltMrCuABWyRxpUKkRs1hYDRIsucKSlXcZEo4hAVD9-rF2ggNKc_DkEb1KqZDAg1MAD5LKA_EuijEmbFN21zWCdh9jk82YAm18sc1LBAWJADb0yUrhQFepq-TSXty-22BdJnkwtEGKEesk_88VGPcMrzuU2Yi4mN0rOcoIEMaE8cqAg"/>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Noor</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Bruges · NL/EN</p>
+</div>
+<!-- Hugo -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Hugo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJtMC6Dpcbgki_-HC_TSguxS54TwkWeUauL3u62svSuNRjTgAdBUbJmpqUkAv9HGF4JhMl0NN5PEHNPqGGlUdr-jfoJNxU7XDKPE4vh_DjmPZ0XOHw-Apdk9jgnV55lb509Z83HXg1F2sEjf3Des2ySPlM60ZKCnuHpMh5Ke3Ote9q-tWba5vQH2cPBSsuGjugn2CKFCJYywYfk8kTiF8s9DbTRw3OJ1Up5S34xSvtt00_Yx60V-PVsPsjFhaYnMWRWjSKIkNRO1o"/>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Hugo</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Brussels · FR/EN</p>
+</div>
+<!-- Lara -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Lara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6BTic_dSztUVhk6zt7rsCQIIKK_oGIjrqi_UBw24Avs8mtEsLRULfYCSWbN4R6aNqGmxx5HOa_KE87BkGqhTAsv11cJ1lwh9e3wuznMA04zPrx6Iy3SJ79B8fbGzlsaHoe__woWHcOiz5IGTi_GuFuBfVPCsLo4UHFyoXfggzCwlp2IytHDBGUvrnlgkOR1BUu3sU3bmTCB9mKly8J615M03vKhIXdwfoOkvzrHC_HpQhzTyqJsyQRRRMCOIwnb5YYLdk8wXoKig"/>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Lara</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Ghent · NL/EN</p>
+</div>
+</div>
+</section><section class="max-w-screen-2xl mx-auto px-8 py-20">
+<div class="flex justify-between items-end mb-10">
+<div>
+<h2 class="font-headline-md text-[24px]">Recently joined</h2>
+<p class="font-body-md text-on-surface-variant text-sm">Welcome the newest independent providers to the directory.</p>
+</div>
+<button class="font-label-caps text-[11px] uppercase tracking-widest border-b border-on-surface pb-1">View all</button>
+</div>
+<div class="flex gap-6 overflow-x-auto scrollbar-hide pb-4">
+<!-- Noa -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Noa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvh9e1QJS6eQQu7lsM3_RxMN3iPoBYLVoERQiIAmrHi8VwgNDuzGj9JSbcwVabpvep2n0lnb1iAT0S8fjBzK1fHvIW9LsbGCMRpSFfSJ8eGtkJFSFfJ3pCsiea3WuCvo7akPfmbnrie5ZmoAVVU_W7o3JyrL0rrWDsbRVKvqd-ZrP0CnQEjVRmazwgRlgGkDz0rzhylx1svLrLt8EXmV0jTkwo_L7MpDg8kjjsrAeiQvzkYbRpjlqzqs1OoDtq9OVsGtw5-A9pDb4"/>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 backdrop-blur-sm text-[10px] font-label-caps px-2 py-1 rounded border border-outline-variant text-on-surface">€€</span>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Noa</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Bruges · NL/EN</p>
+</div>
+<!-- Pierre -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Pierre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJtMC6Dpcbgki_-HC_TSguxS54TwkWeUauL3u62svSuNRjTgAdBUbJmpqUkAv9HGF4JhMl0NN5PEHNPqGGlUdr-jfoJNxU7XDKPE4vh_DjmPZ0XOHw-Apdk9jgnV55lb509Z83HXg1F2sEjf3Des2ySPlM60ZKCnuHpMh5Ke3Ote9q-tWba5vQH2cPBSsuGjugn2CKFCJYywYfk8kTiF8s9DbTRw3OJ1Up5S34xSvtt00_Yx60V-PVsPsjFhaYnMWRWjSKIkNRO1o"/>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 backdrop-blur-sm text-[10px] font-label-caps px-2 py-1 rounded border border-outline-variant text-on-surface">€€</span>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Pierre</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Liège · FR/EN</p>
+</div>
+<!-- Annelies -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Annelies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6BTic_dSztUVhk6zt7rsCQIIKK_oGIjrqi_UBw24Avs8mtEsLRULfYCSWbN4R6aNqGmxx5HOa_KE87BkGqhTAsv11cJ1lwh9e3wuznMA04zPrx6Iy3SJ79B8fbGzlsaHoe__woWHcOiz5IGTi_GuFuBfVPCsLo4UHFyoXfggzCwlp2IytHDBGUvrnlgkOR1BUu3sU3bmTCB9mKly8J615M03vKhIXdwfoOkvzrHC_HpQhzTyqJsyQRRRMCOIwnb5YYLdk8wXoKig"/>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 backdrop-blur-sm text-[10px] font-label-caps px-2 py-1 rounded border border-outline-variant text-on-surface">€€</span>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Annelies</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Ghent · NL/EN</p>
+</div>
+<!-- Maxime -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Maxime" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWPI2vJPbK2xn-wJH6yNuJ2eYK1FoR1mo5ePSAmy78vvVKM8q6VGvVvcuR6aalXDj-p4DP2mPCmq8HikebN85gFbjtRe4kKltMrCuABWyRxpUKkRs1hYDRIsucKSlXcZEo4hAVD9-rF2ggNKc_DkEb1KqZDAg1MAD5LKA_EuijEmbFN21zWCdh9jk82YAm18sc1LBAWJADb0yUrhQFepq-TSXty-22BdJnkwtEGKEesk_88VGPcMrzuU2Yi4mN0rOcoIEMaE8cqAg"/>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 backdrop-blur-sm text-[10px] font-label-caps px-2 py-1 rounded border border-outline-variant text-on-surface">€€€</span>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Maxime</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Brussels · FR/EN</p>
+</div>
+<!-- Eva -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Eva" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkupS3w7EiTMeRNO6CVxgT91qZOP6uZtC4L4SThyAoL-NeTKsxG7df8tEqNRvTjj7BrZMC_Jf3QOmZUjmj-hG2tGZsmzJOKU-DdqB-onVelMfe2PFQMxvAci9WU7tbgYVFCoqZ-b2Hd-sk5UlfFD_nzkVCoQRyU6j0X8rra3C9mRT5wUfsBhHEPTs4ieGsGLTNH1XJ7TGpDKl-Bf-u_xT3fZeDNBUNHeP3A2QBSHKgT21OkM7wssIO7GbJh50r_GiUI2MAs1IBrq4"/>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 backdrop-blur-sm text-[10px] font-label-caps px-2 py-1 rounded border border-outline-variant text-on-surface">€€</span>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Eva</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Antwerp · NL/FR</p>
+</div>
+<!-- Léon -->
+<div class="flex-none w-[calc((100%-120px)/6)] group cursor-pointer">
+<div class="aspect-[3/4] relative overflow-hidden rounded-lg mb-4 editorial-shadow bg-surface-container">
+<img alt="Léon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATFK8ZJdgDPrFHjsYK0fXnrORk-txipgINpOiFRDtkfZ59bBmHAYoYXwh4JBcuqUWjiea0lzGZQHN1bM3qtIVrsJ1UTcS85SqGWZlWDGqzeuDwMUyx6Ht-8BUlV_Nn-eFQ1rAGZnwY34qgXT8cgdL_uT05yntrCjtRACLw-g9vItm-LU1gcXRESewiFHDmjvFutBHLA3XXcY5K-IVyH9T6rOyERWrFT9PwaRauFhe7u-dr6a73EdI38561KLTGHhJdjgjAXX5M0mA"/>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 backdrop-blur-sm text-[10px] font-label-caps px-2 py-1 rounded border border-outline-variant text-on-surface">€€</span>
+</div>
+</div>
+<h4 class="font-headline-md text-lg leading-none mb-1">Léon</h4>
+<p class="font-body-md text-xs text-on-surface-variant">Charleroi · FR/NL</p>
+</div>
+</div>
+</section>
+<!-- Recently joined Rail -->
+</main><footer class="bg-[#E8E0D4] pt-20 pb-12">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8 mb-20 lg:grid-cols-6">
+<!-- Column 1: Brand & Locale -->
+<div class="flex flex-col justify-between lg:col-span-2">
+<div class="space-y-4">
+<a class="text-3xl font-serif font-light tracking-tighter text-[#2A2622]" href="/">Courtly</a>
+<p class="text-[#6B6258] font-sans text-[13px] leading-relaxed italic">
+        A curated advertising directory for independent companions across Belgium.
+    </p>
+</div>
+<div class="mt-8 flex items-center gap-2 text-[13px] font-sans">
+<a class="text-[#6B6258] hover:text-[#2A2622] transition-colors" href="#">FR</a>
+<span class="text-[#B5ADA3]">·</span>
+<a class="text-[#6B6258] hover:text-[#2A2622] transition-colors" href="#">NL</a>
+<span class="text-[#B5ADA3]">·</span>
+<a class="text-[#2A2622] font-semibold" href="#">EN</a>
+<span class="text-[#B5ADA3]">·</span>
+<a class="text-[#6B6258] hover:text-[#2A2622] transition-colors" href="#">DE</a>
+</div>
+</div>
+<!-- Column 2: Browse -->
+<div>
+<h5 class="text-[#2A2622] font-serif text-[13px] uppercase tracking-widest mb-6">Browse</h5>
+<ul class="space-y-2.5">
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-sans text-[13px] transition-colors" href="/companions">Companions</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-sans text-[13px] transition-colors" href="/companions/brussels">Brussels</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-sans text-[13px] transition-colors" href="/companions/antwerp">Antwerp</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-sans text-[13px] transition-colors" href="/companions/ghent">Ghent</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-sans text-[13px] transition-colors" href="/companions/liege">Liège</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-sans text-[13px] transition-colors" href="/companions/charleroi">Charleroi</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-sans text-[13px] transition-colors" href="/companions/bruges">Bruges</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-sans text-[13px] transition-colors" href="/companions/featured">Featured companions</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-sans text-[13px] transition-colors" href="/companions/available-today">Available now</a></li>
+</ul>
+</div>
+<!-- Column 3: For Providers -->
+<div><h5 class="text-[#2A2622] font-label-caps text-[11px] uppercase tracking-[0.2em] mb-6">For providers</h5>
+<ul class="space-y-4">
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/apply">Apply as a provider</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/login">Provider login</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/pricing">Pricing</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/verification">Verification process</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/help/providers">Provider help</a></li>
+</ul></div>
+<!-- Column 4: Trust & Safety -->
+<div><h5 class="text-[#2A2622] font-label-caps text-[11px] uppercase tracking-[0.2em] mb-6">Trust &amp; safety</h5>
+<ul class="space-y-4">
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/about">About Courtly</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/how-we-verify">How we verify</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/editorial-values">Editorial values</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/report">Report a concern</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/safety">Safeguarding &amp; anti-trafficking</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/transparency">Transparency reports</a></li>
+</ul></div>
+<!-- Column 5: Legal -->
+<div><h5 class="text-[#2A2622] font-label-caps text-[11px] uppercase tracking-[0.2em] mb-6">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/terms">Terms of Service</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/privacy">Privacy Policy</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/cookies">Cookie Policy</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/cookies/settings">Cookie Settings</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/acceptable-use">Acceptable Use Policy</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/imprint">Imprint / Mentions légales</a></li>
+<li><a class="text-[#6B6258] hover:text-[#2A2622] font-body-md text-[14px] transition-colors" href="/dsa-contact">DSA point of contact</a></li>
+</ul></div>
+</div>
+<!-- Bottom Legal Strip -->
+<div class="pt-12 border-t border-[#D9D0C4]">
+<div class="bg-[#D8CFBF] rounded-lg p-8 space-y-6">
+<div class="flex flex-col items-center text-center space-y-4">
+<span class="px-3 py-1 border-2 border-[#2A2622] text-[#2A2622] font-bold text-lg rounded">18+</span>
+<p class="text-[#2A2622] font-semibold text-sm tracking-wide uppercase">Adult Content Disclaimer</p>
+</div>
+<div class="max-w-4xl mx-auto text-center">
+<p class="text-[#6B6258] font-body-md text-[12px] leading-relaxed">
+                        Courtly is an advertising platform and does not employ any of the individuals listed. All providers are independent adults who have consented to their likeness being used for advertising purposes. We maintain a zero-tolerance policy towards illegal activity. Users must be 18 years or older to access this site.
+                    </p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-[#6B6258] font-body-md text-[11px] pt-4">
+<p>© 2024 Courtly. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-[#2A2622]" href="#">Contact Support</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer></body></html>

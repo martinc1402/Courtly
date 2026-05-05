@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#211a16",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1c18",
+                        "surface": "#fdf9f3",
+                        "surface-bright": "#fdf9f3",
+                        "tertiary": "#14120b",
+                        "secondary-fixed": "#eee0d8",
+                        "primary-container": "#2a2622",
+                        "surface-container-low": "#f7f3ed",
+                        "on-secondary-fixed-variant": "#4e4540",
+                        "outline-variant": "#cfc5bc",
+                        "outline": "#7d766f",
+                        "inverse-primary": "#cdc5bf",
+                        "background": "#fdf9f3",
+                        "on-tertiary-fixed-variant": "#4b463e",
+                        "tertiary-fixed": "#e9e1d5",
+                        "on-surface-variant": "#4c463f",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#665c57",
+                        "surface-tint": "#635d58",
+                        "inverse-on-surface": "#f4f0ea",
+                        "primary-fixed-dim": "#cdc5bf",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#d1c4bd",
+                        "inverse-surface": "#31302d",
+                        "tertiary-container": "#2a261e",
+                        "surface-variant": "#e6e2dc",
+                        "tertiary-fixed-dim": "#cdc6ba",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#6c625d",
+                        "on-primary-fixed-variant": "#4b4641",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e6e2dc",
+                        "on-tertiary-container": "#938d82",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#f1ede7",
+                        "primary": "#15110e",
+                        "on-primary-container": "#938d87",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#1f1b17",
+                        "surface-dim": "#ddd9d4",
+                        "on-surface": "#1c1c18",
+                        "on-tertiary-fixed": "#1e1b14",
+                        "surface-container-high": "#ebe8e2",
+                        "secondary-container": "#eee0d8",
+                        "primary-fixed": "#eae1da"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["3rem", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "display-lg": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-md": ["2.75rem", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["0.75rem", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-lg": ["1.125rem", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #F8F4ED;
+            color: #1F1A14;
+        }
+        .bronze-accent { color: #A88B6E; }
+        .bronze-bg { background-color: #A88B6E; }
+        .bronze-border { border-color: #A88B6E; }
+    </style>
+</head>
+<body class="font-body-md antialiased">
+<!-- TopAppBar -->
+<nav class="bg-[#FDFCFB] border-b border-[#E5E2DE] flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif italic text-[#3D3530]">Courtly</div>
+<div class="flex items-center gap-8">
+<a class="text-[#1F1A14] font-body-md transition-colors duration-300 cursor-pointer" href="#">Sign out</a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-[640px] mx-auto px-6 pt-24 pb-32">
+<!-- Header Section -->
+<div class="mb-12">
+<div class="w-8 h-[1px] bronze-bg mb-8"></div>
+<h1 class="font-headline-md text-primary mb-6">Your application is with our editorial team.</h1>
+<p class="font-body-lg text-[#5C544A]">Thank you, Isabella — we've received everything we need to begin our review.</p>
+</div>
+<!-- Reference Pill -->
+<div class="inline-flex items-center px-4 py-2 border bronze-border rounded-full mb-20">
+<span class="font-label-caps bronze-accent tracking-widest uppercase">Reference CRT-2026-05-7892</span>
+</div>
+<!-- Next Steps Section -->
+<section class="mb-24">
+<h2 class="font-label-caps text-secondary mb-10 tracking-[0.2em] uppercase text-[10px]">What happens next</h2>
+<div class="space-y-12">
+<!-- Step 01 -->
+<div class="flex gap-8 group">
+<span class="font-headline-xl bronze-accent opacity-40 group-hover:opacity-100 transition-opacity duration-500 italic">01</span>
+<div class="pt-4">
+<h3 class="font-headline-md text-xl mb-2">Email confirmation sent</h3>
+<p class="text-on-surface-variant font-body-md">We've sent a confirmation and a copy of what you submitted to <span class="border-b border-outline-variant">isabella@privatemail.eu</span>.</p>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="flex gap-8 group">
+<span class="font-headline-xl bronze-accent opacity-40 group-hover:opacity-100 transition-opacity duration-500 italic">02</span>
+<div class="pt-4">
+<h3 class="font-headline-md text-xl mb-2">Editorial review</h3>
+<p class="text-on-surface-variant font-body-md">Our editorial team reviews each application personally. Most decisions land within 3–5 working days.</p>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="flex gap-8 group">
+<span class="font-headline-xl bronze-accent opacity-40 group-hover:opacity-100 transition-opacity duration-500 italic">03</span>
+<div class="pt-4">
+<h3 class="font-headline-md text-xl mb-2">You'll hear from us</h3>
+<p class="text-on-surface-variant font-body-md">We'll write with our decision and next steps. If we need clarification on anything, we'll be in touch first.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Practical Info Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-surface-variant pt-12 mb-20">
+<div>
+<h4 class="font-label-caps text-[10px] text-secondary tracking-widest uppercase mb-4">Check your status</h4>
+<p class="text-on-surface-variant font-body-md mb-4 text-sm">Sign in to your provider account to track this application.</p>
+<a class="font-body-md text-sm bronze-accent hover:underline decoration-1 underline-offset-4" href="#">Provider login →</a>
+</div>
+<div>
+<h4 class="font-label-caps text-[10px] text-secondary tracking-widest uppercase mb-4">Need to update something?</h4>
+<p class="text-on-surface-variant font-body-md text-sm leading-relaxed">Reply to the confirmation email and we'll get back to you.</p>
+</div>
+</div>
+<div class="text-center">
+<a class="font-body-md text-sm text-[#6B635E] hover:text-primary transition-colors duration-300" href="#">Return to Courtly →</a>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#F1ECE5] text-[#3D3530] font-body-md border-t border-[#E5E2DE]">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-12 px-8 md:px-12 py-24 w-full max-w-screen-2xl mx-auto">
+<!-- Column 1: Brand -->
+<div class="md:col-span-2 space-y-6">
+<div class="text-2xl font-serif italic">Courtly</div>
+<p class="text-sm leading-relaxed max-w-xs opacity-80">A curated advertising directory for independent companions across Belgium.</p>
+<div class="flex gap-4 pt-4 text-xs tracking-widest uppercase">
+<span class="opacity-40 hover:opacity-100 transition-opacity cursor-pointer">FR</span>
+<span class="opacity-40 hover:opacity-100 transition-opacity cursor-pointer">NL</span>
+<span class="font-bold border-b border-current pb-1">EN</span>
+<span class="opacity-40 hover:opacity-100 transition-opacity cursor-pointer">DE</span>
+</div>
+</div>
+<!-- Column 2: Browse -->
+<div class="space-y-4">
+<h5 class="font-bold mb-6 text-[11px] uppercase tracking-widest">Browse</h5>
+<ul class="space-y-3 text-sm opacity-80">
+<li><a class="hover:underline underline-offset-4" href="#">Companions</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Brussels</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Antwerp</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Ghent</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Liège</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Charleroi</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Bruges</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Featured companions</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Available now</a></li>
+</ul>
+</div>
+<!-- Column 3: For providers -->
+<div class="space-y-4">
+<h5 class="font-bold mb-6 text-[11px] uppercase tracking-widest">For providers</h5>
+<ul class="space-y-3 text-sm opacity-80">
+<li><a class="hover:underline underline-offset-4" href="#">Apply as a provider</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Provider login</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Pricing</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Verification process</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Provider help</a></li>
+</ul>
+</div>
+<!-- Column 4: Trust & safety -->
+<div class="space-y-4">
+<h5 class="font-bold mb-6 text-[11px] uppercase tracking-widest">Trust &amp; safety</h5>
+<ul class="space-y-3 text-sm opacity-80">
+<li><a class="hover:underline underline-offset-4" href="#">About Courtly</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">How we verify</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Editorial values</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Report a concern</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Safeguarding &amp; anti-trafficking</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Transparency reports</a></li>
+</ul>
+</div>
+<!-- Column 5: Legal -->
+<div class="space-y-4">
+<h5 class="font-bold mb-6 text-[11px] uppercase tracking-widest">Legal</h5>
+<ul class="space-y-3 text-sm opacity-80">
+<li><a class="hover:underline underline-offset-4" href="#">Terms of Service</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Privacy Policy</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Cookie Policy</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Cookie Settings</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Acceptable Use Policy</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">Imprint / Mentions légales</a></li>
+<li><a class="hover:underline underline-offset-4" href="#">DSA point of contact</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Legal Strip -->
+<div class="w-full px-8 md:px-12 py-12 border-t border-[#D9D5D0]">
+<div class="max-w-screen-2xl mx-auto flex flex-col items-center text-center space-y-4 opacity-50 text-[10px] leading-relaxed">
+<div class="max-w-2xl uppercase tracking-[0.15em] text-[#3D3530]">
+                    USERS MUST BE 18+ TO ACCESS THIS SITE. PLEASE CONSULT LOCAL LAWS IN YOUR JURISDICTION. THIS WEBSITE IS A CURATED ADVERTISING PLATFORM.
+                </div>
+<div class="max-w-3xl italic text-[#3D3530]">
+                    Courtly is an adult advertising directory for independent providers. Courtly does not arrange bookings, collect client payments, process deposits, or act as an agency.
+                </div>
+<div class="text-[#3D3530]">
+                    Copyright © 2026 Courtly. All rights reserved.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>

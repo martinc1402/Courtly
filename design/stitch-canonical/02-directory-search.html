@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#635d58",
+                      "background": "#fdf9f3",
+                      "outline-variant": "#cfc5bc",
+                      "tertiary-container": "#2a261e",
+                      "on-primary": "#ffffff",
+                      "surface": "#fdf9f3",
+                      "inverse-surface": "#31302d",
+                      "on-primary-container": "#938d87",
+                      "primary-fixed": "#eae1da",
+                      "tertiary-fixed-dim": "#cdc6ba",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#eee0d8",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#211a16",
+                      "error-container": "#ffdad6",
+                      "on-background": "#1c1c18",
+                      "on-tertiary-fixed-variant": "#4b463e",
+                      "primary-fixed-dim": "#cdc5bf",
+                      "on-secondary": "#ffffff",
+                      "secondary-fixed": "#eee0d8",
+                      "surface-bright": "#fdf9f3",
+                      "on-primary-fixed-variant": "#4b4641",
+                      "on-primary-fixed": "#1f1b17",
+                      "on-error": "#ffffff",
+                      "secondary": "#665c57",
+                      "surface-container-low": "#f7f3ed",
+                      "surface-container-high": "#ebe8e2",
+                      "surface-container": "#f1ede7",
+                      "outline": "#7d766f",
+                      "on-secondary-container": "#6c625d",
+                      "surface-variant": "#e6e2dc",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#d1c4bd",
+                      "on-tertiary-container": "#938d82",
+                      "on-surface-variant": "#4c463f",
+                      "surface-container-highest": "#e6e2dc",
+                      "primary": "#15110e",
+                      "on-tertiary-fixed": "#1e1b14",
+                      "tertiary-fixed": "#e9e1d5",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#f4f0ea",
+                      "primary-container": "#2a2622",
+                      "on-surface": "#1c1c18",
+                      "tertiary": "#14120b",
+                      "on-secondary-fixed-variant": "#4e4540",
+                      "surface-dim": "#ddd9d4",
+                      "inverse-primary": "#cdc5bf",
+                      "courtly-green": "#5C8A5A",
+                      "courtly-bronze": "#A68966"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "section-gap": "120px",
+                      "margin-desktop": "80px",
+                      "gutter": "24px",
+                      "container-max": "2560px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Noto Serif"],
+                      "body-lg": ["Inter"],
+                      "headline-xl": ["Noto Serif"],
+                      "headline-md": ["Noto Serif"],
+                      "body-md": ["Inter"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "body-lg": ["1.125rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-xl": ["3rem", {"lineHeight": "1.2", "fontWeight": "400"}],
+                      "headline-md": ["2rem", {"lineHeight": "1.3", "fontWeight": "400"}],
+                      "body-md": ["1rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["0.75rem", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+        .sticky-nav { position: sticky; top: 0; z-index: 100; }
+        .sticky-filter { position: sticky; top: 56px; z-index: 90; }
+        .sticky-map { position: sticky; top: calc(56px + 128px); height: calc(100vh - (56px + 128px)); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .bronze-tick { color: #A68966; }
+        .availability-dot { background-color: #5C8A5A; }
+    </style>
+</head>
+<body class="bg-background text-primary font-body-md overflow-x-hidden">
+<!-- Header Fix 1 -->
+<header class="sticky-nav h-[56px] bg-[#F7F3ED] border-b border-[#D9D4D0] flex justify-between items-center px-8 w-full z-[110]">
+<div class="flex items-center gap-10">
+<a class="text-xl font-serif text-[#2A2622]" href="#">Courtly</a>
+<nav class="hidden md:flex items-center gap-8 text-sm">
+<a class="text-[#2A2622] border-b-2 border-[#2A2622] pb-0.5 font-serif" href="#">Companions</a>
+<a class="text-[#2A2622]/60 font-serif hover:text-[#2A2622] transition-colors" href="#">Cities</a>
+<a class="text-[#2A2622]/60 font-serif hover:text-[#2A2622] transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<a class="text-xs font-label-caps tracking-wide text-[#2A2622]/70 hover:text-primary transition-opacity" href="#">Provider Login</a>
+<button class="border border-[#2A2622] text-[#2A2622] px-4 py-1.5 rounded-[8px] font-label-caps tracking-wide text-xs hover:bg-[#2A2622] hover:text-white transition-all">Apply as a provider</button>
+<div class="flex items-center gap-1 text-[#2A2622]/60 font-label-caps text-xs cursor-pointer">
+<span>EN</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+</div>
+</header>
+<!-- Page Heading Bar -->
+<section class="bg-[#FDFCFB] py-8 px-8 flex justify-between items-baseline border-b border-[#E6E2DF]">
+<div>
+<h1 class="font-headline-md text-[32px] text-primary">Companions in Brussels</h1>
+<p class="text-on-surface-variant font-body-md mt-1">247 results · within 25km</p>
+</div>
+<div class="italic text-on-surface-variant text-sm font-serif">
+        Featured listings appear first and are paid placements.
+    </div>
+</section>
+<!-- Sticky Filter Bar -->
+<div class="sticky-filter bg-[#FDFCFB] border-b border-[#D9D4D0] z-50">
+<nav class="px-8 py-4 flex items-center gap-4">
+<button class="flex items-center gap-2 border border-outline-variant px-4 py-2 text-sm bg-white">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+            Brussels
+            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="flex items-center gap-2 border border-outline-variant px-4 py-2 text-sm bg-white">
+            within 25km
+            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<div class="flex items-center gap-3 px-2">
+<span class="text-sm">Available today</span>
+<div class="w-10 h-5 bg-surface-variant rounded-full p-1 cursor-pointer">
+<div class="w-3 h-3 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-3 px-2">
+<span class="text-sm">Photo verified</span>
+<div class="w-10 h-5 bg-primary rounded-full p-1 cursor-pointer flex justify-end">
+<div class="w-3 h-3 bg-white rounded-full"></div>
+</div>
+</div>
+<button class="flex items-center gap-2 border border-outline-variant px-4 py-2 text-sm bg-white">
+            Languages
+            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="flex items-center gap-2 border border-outline-variant px-4 py-2 text-sm bg-white">
+            Gender
+            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="text-sm font-semibold underline underline-offset-4 ml-2">More filters</button>
+<div class="ml-auto flex items-center gap-2 text-sm">
+<span class="text-on-surface-variant">Sort:</span>
+<button class="flex items-center gap-1 font-semibold">
+                Featured
+                <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+</nav>
+<!-- Fix 4: Active Filter Chips Row -->
+<div class="px-8 pb-3 flex items-center gap-4 border-t border-[#F1EDE7] pt-2">
+<span class="text-[10px] font-bold tracking-widest uppercase text-on-surface-variant">Active:</span>
+<div class="flex items-center gap-2 bg-white border border-[#2A2622] rounded-full px-3 py-1 text-xs">
+<span>Photo verified</span>
+<span class="material-symbols-outlined text-[14px] cursor-pointer">close</span>
+</div>
+<button class="ml-auto text-[10px] font-semibold text-on-surface-variant/60 hover:text-primary tracking-widest uppercase underline">Clear all</button>
+</div>
+</div>
+<!-- Main Content Layout -->
+<main class="flex w-full max-w-[2560px] mx-auto min-h-screen">
+<!-- Left Column: Results -->
+<div class="w-[58%] px-8 py-10">
+<!-- Featured Section Fix 2 -->
+<div class="mb-12">
+<div class="flex items-center gap-4 mb-8">
+<h2 class="font-label-caps tracking-[0.2em] text-on-surface-variant text-xs uppercase">Featured this week</h2>
+<div class="h-[1px] flex-grow bg-outline-variant"></div>
+</div>
+<div class="grid grid-cols-2 gap-8 mb-8 pb-8 border-b border-outline-variant/30">
+<!-- Featured Card: Isabella -->
+<div class="group cursor-pointer border-t-[3px] border-[#A88B6E] pt-4">
+<div class="aspect-[3/4] bg-surface-variant mb-4 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Portrait of Isabella" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCNhgOtviYoGjWhChEvGdIzVnGBdRfFVQNHY1XU-1D40F4RzdGtG7ZCf3g0IIuXfSL6sqIdqwiYAxRu8Cv-bAH9oftS1vasEn1lJXhXuYNZ0w4wjMCanEJUMrP0mMl51PYVaVVbEALFUo7b17H_jZHfiYHAnUWF174MHx5nbtPjJFWF4xaYNP6io_DKS5XVnehgl40fS6Vw9c48GghmNai6ZU_4PaAIk8lql-3AqC4DFw30pMkiLH7oBF1KNl0j5-wUGSb8069e_0"/>
+<div class="absolute top-3 left-3 bg-[#fdf9f3] text-primary px-3 py-1 text-[10px] font-serif tracking-widest uppercase shadow-sm">FEATURED</div>
+<div class="absolute bottom-4 left-4 w-3 h-3 availability-dot rounded-full border-2 border-white"></div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-md text-xl flex items-center gap-2">
+                            Isabella · Louise
+                            <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</h3>
+<p class="text-label-caps text-[10px] mt-1 tracking-widest">EN · FR · IT</p>
+<p class="text-[#6B6258] text-[14px] italic font-serif mt-2">Timeless elegance and refined cultural conversation.</p>
+</div>
+</div>
+<!-- Featured Card: Margot -->
+<div class="group cursor-pointer border-t-[3px] border-[#A88B6E] pt-4">
+<div class="aspect-[3/4] bg-surface-variant mb-4 relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Portrait of Margot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS_KchJyhF0_GIVUIpbKmQfr_7_H_1wHIE1-epp1V5sAS88ZlqhO5Veqc0UVzCHRSblEOjGHWhKMUMwI04RjBoB_RfsrCiqKXHy0sJalPqZA839EpZ9n1Qm0QS-DEpES12rFHF8mQVA4BcggSRzbeHQRv4GKqNLS15O_r9b86Jrtl1OQJW8D8cCRYL9igpX_3FmhjXy74t_hXUzxrIHgHIYV1Fgf-aYGq8wXI0Abxz8ZSwXYAwvhQpl23HmaSMEtsNQQucCRcmsqE"/>
+<div class="absolute top-3 left-3 bg-[#fdf9f3] text-primary px-3 py-1 text-[10px] font-serif tracking-widest uppercase shadow-sm">FEATURED</div>
+<div class="absolute bottom-4 left-4 w-3 h-3 availability-dot rounded-full border-2 border-white"></div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-md text-xl flex items-center gap-2">
+                            Margot · Ixelles
+                            <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</h3>
+<p class="text-label-caps text-[10px] mt-1 tracking-widest">EN · FR · ES</p>
+<p class="text-[#6B6258] text-[14px] italic font-serif mt-2">A curated approach to the modern urban lifestyle.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Fix 3: Result Grid (12 Providers) -->
+<div class="grid grid-cols-2 gap-x-8 gap-y-16">
+<!-- 1. Sasha -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCNhgOtviYoGjWhChEvGdIzVnGBdRfFVQNHY1XU-1D40F4RzdGtG7ZCf3g0IIuXfSL6sqIdqwiYAxRu8Cv-bAH9oftS1vasEn1lJXhXuYNZ0w4wjMCanEJUMrP0mMl51PYVaVVbEALFUo7b17H_jZHfiYHAnUWF174MHx5nbtPjJFWF4xaYNP6io_DKS5XVnehgl40fS6Vw9c48GghmNai6ZU_4PaAIk8lql-3AqC4DFw30pMkiLH7oBF1KNl0j5-wUGSb8069e_0"/>
+<div class="absolute bottom-4 left-4 w-3 h-3 availability-dot rounded-full border-2 border-white"></div>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Sasha · Ixelles <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">EN · FR · RU</p>
+</div>
+<!-- 2. Sofia -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXl8m8Zvw0ZWfgTstXRnasb7g2LNV9IV4Vk47pduOtYpx1CE3rVbYCUdOeVK0831VNOZg2Xtlz6DDsas55TvDmZsEnHTXX0AGc7omoQiQ6MDX11PEFnzmioDIwn9HMi1f8Up2mqvRBnBkQv5B1S9DGH6ImmcANfLDZjQJyOp_GoxzeAvon9bWiIlpExnfNB35JdlcXBBlKwVbG2f4tkchgZpWuADDyi72trApBEVrBCC48D0TG4MyNXcaYhrwk2jzv8-YhvLSZRmI"/>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Sofia · Saint-Gilles <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">EN · ES</p>
+</div>
+<!-- 3. Hugo -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ndg3rEZPNhRWMw4zefRKusoMhtfJr8tmNZNpUc2hadEAqtxaTGniKjG7aAFwpbozB2CUpeF78dE2DYM2CKldrLLdy9992c4zZzWLhfMbCvRgckzquy55je3B9eC8ynJPMtQlcd_mqX32axcsbkEUI58A1VnvjG2bNxir7qgRxE_BkHKYytcijP9GHy8B2R5es94GbYu9UxPHIEA0YdhfFGKZm-0K-EtiMIYYy1eaP7SEx-5hyBDbSHYNG-iDlkS480m4F0MVOVk"/>
+<div class="absolute bottom-4 left-4 w-3 h-3 availability-dot rounded-full border-2 border-white"></div>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Hugo · Sablon <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">EN · DE · NL</p>
+</div>
+<!-- 4. Olivia -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS_KchJyhF0_GIVUIpbKmQfr_7_H_1wHIE1-epp1V5sAS88ZlqhO5Veqc0UVzCHRSblEOjGHWhKMUMwI04RjBoB_RfsrCiqKXHy0sJalPqZA839EpZ9n1Qm0QS-DEpES12rFHF8mQVA4BcggSRzbeHQRv4GKqNLS15O_r9b86Jrtl1OQJW8D8cCRYL9igpX_3FmhjXy74t_hXUzxrIHgHIYV1Fgf-aYGq8wXI0Abxz8ZSwXYAwvhQpl23HmaSMEtsNQQucCRcmsqE"/>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Olivia · Uccle <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">EN · FR · IT</p>
+</div>
+<!-- 5. Maxime -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYWeS3u2SYRgC-6psYEOc5rTcFOuWDeo3bGGH6KIJhitTrKH8rMk6FTztYGFndwFaJXszQlcE4q4GtOp3yHki06XP4AQOgx03QmLmdHGLhEHmz2_cdO_gVkXRkWYXQwRrrnk0jZ3p17Ew1ikGW05YR9sdXaH8zqNrc9QUQ9KKLmYBYpoAzBKqPOpVePg21N78BZR8A4WDbUtWjadPS7rG5AVcvOhjzogUiwA7vxeMS_TDKJgiDlbzJeU_4L6_nifLSgBT3Vk4S-qs"/>
+<div class="absolute bottom-4 left-4 w-3 h-3 availability-dot rounded-full border-2 border-white"></div>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Maxime · Etterbeek <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">FR · EN</p>
+</div>
+<!-- 6. Théo -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTBLVB74ZwtKh7SQ0-Ewo8h8d-liLbDVZeoZqLzs5xgwQ9RBjvsnAUoBh_PcHw4zfgh2ssAS_Fl-hgQJneKjjcKEjzLYOPorTyz-HSTzghipmzcQI0CSJ0d5C8uh6iQCcfJJlXvJi9iwrCtIdpineZgXukDWoz1-Wgd1kGfLDJIu33Tw_atM7_hak9RLNxliiJVRELCkSEZX3uiypzVE1OaYrTl_jJe0fPB3B0FN3rsvRTd5IOkB5z-wSsK24zQybQZXY8V5n9XDI"/>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Théo · Ville de Bruxelles <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">NL · EN · FR</p>
+</div>
+<!-- 7. Inès -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCXAJULaOJxpmcZEVu7cFh1M4tb3xkl019fiKqKt9lEIjek6aIsK__muBpbFdjhZXJbs0mJ_sW1G-9hxZrDkCn4oFj3wa60ndfEJm1P5K8uNhpHjEBPPKYoamivkSQf7X9hqpW5R6qKy3AeJQL6Y01JK1loPRzD58zhv5VndP1ae5I813N5JnbZi5dLXbVwltw1bWeNTTx84eoNKIMq0HE1Dm0alhzLa_FRPNQGaOW4q2L0QQH2nepJ554ua8OjO_SnOKQHOQFNIg"/>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Inès · Forest <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">FR · AR · EN</p>
+</div>
+<!-- 8. Lucie -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCWcyt4bLtwX0otpibD9oRqjHMG6o7El2Hh4c_NwDttGu75eTBSLBuBjfo8D2ONo7lFpf0OauguWzyVReu5DvrdzTDUaOQ3stieGlJ5NNoLnEzKKP94fg1L7_GPIr0TKF4VmlK8lHXxi0Ug-FGsqGj9DoA1XCzmXoEBn2UDDbumPXwRTeIDk8yEBEeihAVee_f2LbNvZ6KaPhwj3tflo1WndgUScdjXfwIfe_jnruUCOi3DREgroEByeOfHyfAVUWq2JTyc59SFWY"/>
+<div class="absolute bottom-4 left-4 w-3 h-3 availability-dot rounded-full border-2 border-white"></div>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Lucie · Schaerbeek <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">FR · EN</p>
+</div>
+<!-- 9. Antoine -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7ndg3rEZPNhRWMw4zefRKusoMhtfJr8tmNZNpUc2hadEAqtxaTGniKjG7aAFwpbozB2CUpeF78dE2DYM2CKldrLLdy9992c4zZzWLhfMbCvRgckzquy55je3B9eC8ynJPMtQlcd_mqX32axcsbkEUI58A1VnvjG2bNxir7qgRxE_BkHKYytcijP9GHy8B2R5es94GbYu9UxPHIEA0YdhfFGKZm-0K-EtiMIYYy1eaP7SEx-5hyBDbSHYNG-iDlkS480m4F0MVOVk"/>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Antoine · Sablon <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">FR · EN</p>
+</div>
+<!-- 10. Jade -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXl8m8Zvw0ZWfgTstXRnasb7g2LNV9IV4Vk47pduOtYpx1CE3rVbYCUdOeVK0831VNOZg2Xtlz6DDsas55TvDmZsEnHTXX0AGc7omoQiQ6MDX11PEFnzmioDIwn9HMi1f8Up2mqvRBnBkQv5B1S9DGH6ImmcANfLDZjQJyOp_GoxzeAvon9bWiIlpExnfNB35JdlcXBBlKwVbG2f4tkchgZpWuADDyi72trApBEVrBCC48D0TG4MyNXcaYhrwk2jzv8-YhvLSZRmI"/>
+<div class="absolute bottom-4 left-4 w-3 h-3 availability-dot rounded-full border-2 border-white"></div>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Jade · Louise <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">FR · EN · NL</p>
+</div>
+<!-- 11. Nathan -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYWeS3u2SYRgC-6psYEOc5rTcFOuWDeo3bGGH6KIJhitTrKH8rMk6FTztYGFndwFaJXszQlcE4q4GtOp3yHki06XP4AQOgx03QmLmdHGLhEHmz2_cdO_gVkXRkWYXQwRrrnk0jZ3p17Ew1ikGW05YR9sdXaH8zqNrc9QUQ9KKLmYBYpoAzBKqPOpVePg21N78BZR8A4WDbUtWjadPS7rG5AVcvOhjzogUiwA7vxeMS_TDKJgiDlbzJeU_4L6_nifLSgBT3Vk4S-qs"/>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Nathan · Saint-Gilles <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">FR · EN · DE</p>
+</div>
+<!-- 12. Charlotte -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] bg-surface-variant mb-4 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCNhgOtviYoGjWhChEvGdIzVnGBdRfFVQNHY1XU-1D40F4RzdGtG7ZCf3g0IIuXfSL6sqIdqwiYAxRu8Cv-bAH9oftS1vasEn1lJXhXuYNZ0w4wjMCanEJUMrP0mMl51PYVaVVbEALFUo7b17H_jZHfiYHAnUWF174MHx5nbtPjJFWF4xaYNP6io_DKS5XVnehgl40fS6Vw9c48GghmNai6ZU_4PaAIk8lql-3AqC4DFw30pMkiLH7oBF1KNl0j5-wUGSb8069e_0"/>
+<div class="absolute bottom-4 left-4 w-3 h-3 availability-dot rounded-full border-2 border-white"></div>
+</div>
+<h3 class="font-headline-md text-xl flex items-center gap-2">Charlotte · Uccle <span class="material-symbols-outlined bronze-tick text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span></h3>
+<p class="text-label-caps text-[10px] mt-2 tracking-widest text-on-surface-variant">FR · EN · NL</p>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex flex-col items-center gap-6 pb-20">
+<button class="px-12 py-4 border border-primary text-primary font-label-caps tracking-[0.2em] uppercase text-xs hover:bg-primary hover:text-white transition-colors">
+                Load more companions
+            </button>
+<p class="text-on-surface-variant text-sm font-serif italic">Showing 14 of 247</p>
+</div>
+</div>
+<!-- Right Column: Sticky Map -->
+<aside class="w-[42%] sticky-map border-l border-outline-variant bg-[#F4EFE7] relative overflow-hidden">
+<div class="absolute inset-0 opacity-40">
+<div class="w-full h-full" style="background-image: radial-gradient(circle at 2px 2px, #3D3530 1px, transparent 0); background-size: 40px 40px;"></div>
+</div>
+<!-- Map Labels & Markers Fix 3: 14 fuzzy bronze circles -->
+<div class="absolute inset-0 p-12">
+<div class="absolute top-[30%] left-[45%] z-10">
+<div class="w-32 h-32 bg-courtly-bronze/10 rounded-full border border-courtly-bronze/20 backdrop-blur-sm flex items-center justify-center">
+<span class="font-headline-md text-sm text-primary/60">Brussels</span>
+</div>
+</div>
+<!-- Fuzzy bronze circles for 14 results -->
+<div class="absolute top-[20%] left-[25%] w-16 h-16 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[25%] left-[60%] w-12 h-12 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[40%] left-[20%] w-20 h-20 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[45%] left-[75%] w-14 h-14 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[55%] left-[35%] w-18 h-18 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[65%] left-[55%] w-16 h-16 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[15%] left-[45%] w-12 h-12 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[75%] left-[30%] w-22 h-22 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[80%] left-[60%] w-10 h-10 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[50%] left-[10%] w-14 h-14 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[35%] left-[80%] w-12 h-12 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[10%] left-[15%] w-16 h-16 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[60%] left-[85%] w-10 h-10 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+<div class="absolute top-[85%] left-[45%] w-14 h-14 bg-courtly-bronze/20 rounded-full blur-[2px] border border-courtly-bronze/10"></div>
+</div>
+<!-- Map Control -->
+<div class="absolute bottom-8 right-8 flex flex-col gap-2">
+<button class="w-10 h-10 bg-white shadow-lg flex items-center justify-center text-primary"><span class="material-symbols-outlined">add</span></button>
+<button class="w-10 h-10 bg-white shadow-lg flex items-center justify-center text-primary border-t border-surface-variant"><span class="material-symbols-outlined">remove</span></button>
+</div>
+<button class="absolute top-4 left-1/2 -translate-x-1/2 bg-white border border-[#2A2622] rounded-full px-5 py-2.5 shadow-md transition-all hover:bg-[#2A2622] hover:text-white z-20 flex items-center gap-2 group">
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:rotate-180 duration-500">refresh</span>
+<span class="font-sans text-[13px] font-semibold">Search this area</span>
+</button><div class="absolute bottom-4 left-4 bg-white border border-[#D9D4D0] rounded-full px-4 py-2 shadow-sm cursor-pointer z-20 flex items-center gap-3">
+<div class="w-9 h-5 bg-[#E8E0D4] rounded-full p-1 flex items-center">
+<div class="w-3 h-3 bg-white rounded-full"></div>
+</div>
+<span class="font-sans text-[12px] text-[#2A2622]">Search as I move the map</span>
+</div></aside>
+</main>
+<!-- Footer -->
+<footer class="bg-[#E6E2DF] border-t border-[#D1CCC7] pt-20">
+<div class="grid grid-cols-6 gap-12 w-full max-w-[2560px] mx-auto px-12 mb-20">
+<div class="col-span-2">
+<h2 class="font-serif text-2xl italic mb-6">Courtly</h2>
+<p class="text-on-surface-variant text-sm font-serif italic max-w-sm mb-8 leading-relaxed">
+                Courtly Editorial is a heritage-inspired platform dedicated to the art of companionship and the pursuit of quiet luxury in urban environments.
+            </p>
+<div class="text-[#3D3530] font-sans text-xs tracking-wider uppercase">
+                © 2024 Courtly Editorial. All rights reserved.
+            </div>
+</div>
+<div class="col-span-1">
+<h3 class="font-label-caps text-[10px] tracking-[0.2em] uppercase mb-6">Directory</h3>
+<ul class="space-y-4 text-xs font-sans tracking-wider uppercase opacity-70">
+<li class="hover:opacity-100 transition-opacity cursor-pointer">Brussels</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer">Antwerp</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer">Ghent</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer">Bruges</li>
+</ul>
+</div>
+<div class="col-span-1">
+<h3 class="font-label-caps text-[10px] tracking-[0.2em] uppercase mb-6">Editorial</h3>
+<ul class="space-y-4 text-xs font-sans tracking-wider uppercase opacity-70">
+<li class="hover:opacity-100 transition-opacity cursor-pointer">Journal</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer">Interviews</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer">City Guides</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer">Culture</li>
+</ul>
+</div>
+<div class="col-span-1">
+<h3 class="font-label-caps text-[10px] tracking-[0.2em] uppercase mb-6">Legal</h3>
+<ul class="space-y-4 text-xs font-sans tracking-wider uppercase opacity-70">
+<li class="hover:opacity-100 transition-opacity cursor-pointer underline">Privacy Policy</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer underline">Terms of Service</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer underline">Ethical Standards</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer underline">Contact</li>
+</ul>
+</div>
+<div class="col-span-1">
+<h3 class="font-label-caps text-[10px] tracking-[0.2em] uppercase mb-6">Language</h3>
+<ul class="space-y-4 text-xs font-sans tracking-wider uppercase opacity-70">
+<li class="hover:opacity-100 transition-opacity cursor-pointer">English</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer">Français</li>
+<li class="hover:opacity-100 transition-opacity cursor-pointer">Nederlands</li>
+</ul>
+</div>
+</div>
+<!-- Fix 6: Legal Strip Restoration -->
+<div class="bg-[#D8CFBF] py-8 px-12 border-t border-[#C9C0B1]">
+<div class="max-w-[2560px] mx-auto">
+<div class="flex justify-between items-start gap-12 text-[11px] text-primary/80 font-serif italic leading-relaxed">
+<div class="flex-1 flex gap-12">
+<p class="flex-1">This site is for adults only. By accessing this site, you represent that you are at least 18 years of age (or the legal age of majority in your jurisdiction).</p>
+<div class="w-[1px] h-12 bg-primary/20 shrink-0"></div>
+<p class="flex-1">Courtly is an adult advertising directory for independent companions. We do not provide or arrange services. Users are responsible for their own conduct and compliance with local regulations.</p>
+</div>
+<div class="shrink-0 text-right uppercase tracking-widest font-sans not-italic text-[10px] mt-1">
+                    © 2026 Courtly. All rights reserved.
+                </div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Isabella | Courtly Brussels</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#635d58",
+                        "on-secondary-fixed-variant": "#4e4540",
+                        "secondary-fixed": "#eee0d8",
+                        "primary-fixed": "#eae1da",
+                        "on-tertiary-fixed-variant": "#4b463e",
+                        "outline-variant": "#cfc5bc",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#eee0d8",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#1e1b14",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fdf9f3",
+                        "tertiary-fixed": "#e9e1d5",
+                        "on-tertiary-container": "#938d82",
+                        "on-primary-fixed-variant": "#4b4641",
+                        "tertiary": "#14120b",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#d1c4bd",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f7f3ed",
+                        "on-surface": "#1c1c18",
+                        "on-surface-variant": "#4c463f",
+                        "inverse-on-surface": "#f4f0ea",
+                        "inverse-surface": "#31302d",
+                        "tertiary-container": "#2a261e",
+                        "surface-dim": "#ddd9d4",
+                        "secondary": "#665c57",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e6e2dc",
+                        "surface-bright": "#fdf9f3",
+                        "on-background": "#1c1c18",
+                        "on-primary-fixed": "#1f1b17",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#938d87",
+                        "surface": "#fdf9f3",
+                        "on-secondary-container": "#6c625d",
+                        "error-container": "#ffdad6",
+                        "primary": "#15110e",
+                        "primary-container": "#2a2622",
+                        "outline": "#7d766f",
+                        "primary-fixed-dim": "#cdc5bf",
+                        "inverse-primary": "#cdc5bf",
+                        "tertiary-fixed-dim": "#cdc6ba",
+                        "surface-container-highest": "#e6e2dc",
+                        "on-secondary-fixed": "#211a16",
+                        "surface-container-high": "#ebe8e2",
+                        "surface-container": "#f1ede7"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "body-lg": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>body { background-color: #fdf9f3; color: #2A2622; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .watermark {
+     position: absolute;
+     bottom: 10px;
+     right: 14px;
+     color: rgba(168, 139, 110, 0.7);
+     font-family: 'Noto Serif', serif;
+     font-style: italic;
+     font-size: 13px;
+     letter-spacing: 0.02em;
+     pointer-events: none;
+     user-select: none;
+     text-shadow: 0 1px 3px rgba(20, 18, 11, 0.4);
+     z-index: 10;
+   }</style>
+</head>
+<body class="font-body-md text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-[#F7F3ED] border-b border-[#D9D4D0] shadow-sm shadow-[#3D3530]/5 h-14 flex items-center">
+<div class="max-w-[1440px] mx-auto w-full px-8 flex justify-between items-center">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-serif italic text-[#2A2622]" href="#">Courtly</a>
+<nav class="hidden md:flex gap-8 items-center h-14">
+<a class="text-on-surface border-b border-primary pb-0.5 text-sm font-medium" href="#">Companions</a>
+<a class="text-on-surface/60 hover:text-on-surface transition-colors text-sm font-medium" href="#">Cities</a>
+<a class="text-on-surface/60 hover:text-on-surface transition-colors text-sm font-medium" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="text-sm text-on-surface/60 cursor-pointer">Provider Login</span>
+<button class="px-5 py-2 border border-[#2A2622] rounded-full text-xs font-semibold uppercase tracking-wider hover:bg-[#2A2622] hover:text-white transition-all duration-300">Apply to Join</button>
+<div class="flex items-center gap-1 text-sm font-medium cursor-pointer">
+<span>EN</span>
+<span class="material-symbols-outlined text-xs">expand_more</span>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-8 pt-8">
+<!-- Breadcrumbs & Status -->
+<div class="flex justify-between items-center mb-6">
+<nav class="flex items-center gap-2 text-[13px] text-on-surface/50 font-medium tracking-tight">
+<a class="hover:text-on-surface transition-colors" href="#">Companions</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-on-surface transition-colors" href="#">Brussels</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface/80">Isabella</span>
+</nav>
+<span class="text-[13px] italic text-on-surface/50">Last seen 12 minutes ago</span>
+</div>
+<!-- Photo Gallery (Airbnb Style) -->
+<section class="grid grid-cols-4 grid-rows-2 gap-3 h-[560px] rounded-2xl overflow-hidden relative mb-12">
+<div class="col-span-2 row-span-2 relative overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3Q1ftUVoj8T_KnCJbX2P78YtiJsrc7UCrs76jxSf2m4X-idPMdCP6mMXGa3YWdnAFffDRl_rIHMwIz5Yx6OCotjdroXNLIxJvqZy-5AK9QgsKmSopp2CB-SqNhwqObLnVWag0ihsGTTaC2yv1nmsa58tuB2BqiRlFI85QT-DfzoqWSqdyzRfs9GUQSBcj3xUwzul1CiJK8M2BN2L6RiY92bJ9YrKhCpfvxXw27IJ38Q92A6G9LatBqc1JtAgGpEwSe6NTuaoN5mI"/>
+<div class="watermark">Courtly</div>
+</div>
+<div class="relative overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn4o-L837VuW9a0krOtPHrtt8dwBmd81S4wd8I-aXuL-7zwChV6xbXeaL6FC2uxFQv0QYsG5Q9ue4kuV4DtAJUaNLNiEIcD6XF2bLG3eXKECKANAbnvQRmmQ15aavJME986x7rRTc37Kaosp6GkR9z3aEbWELfrdgFh1DpkAgBWQmvw9Knk1ztx4O2AmY72JnrbVmeUJVGmKXFjzdhZptNu4b-EvTh_Pz6bOEs8xdaEdvS0FHVoO5Jj9YH-5-WCBt7cT9xTrLhojc"/>
+<div class="watermark">Courtly</div>
+</div>
+<div class="relative overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCC4qrIvz32K6nvH_xl8C1JE7gjWOLO14lraaU1jQl4G6cfNGUeimLDV7es-avQ_8BZIzyPoYgcPN3tH1uo5zzrMjb2a4HIN1V3zNAZP7kIhLj8nedeEUXaNJ9xf6N1J66lB1YI6cv4_X-ALs_J-GP4VhSIs9_73RJHorsefhd6S7bvwzrHFgABYaIDzu-HKVgzpVa4sniSOQhaLMSt8CAUlyF0QnDuZWQWUCx_Yr1uK2I9N8oAgE6iDifDsPNUcoXFAU1H1XYrBI"/>
+<div class="watermark">Courtly</div>
+</div>
+<div class="relative overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSCBzoL5_W2BTtoOu67B9jIzVwB9fvXafxHTSkTP1UQDq6gwtdicG2CVBmG5iGeGkJo77ietCnM_SS8Lg2hBhNu5QEAeXpwOSSiV4FNL4acbKCLQ02UMSw0zD5S1DOOTlrP0XRjzaaWZuzVIlihbXeVpSc2RKC0ebrImF8s0uwURGC_QtpRCL5v6mRo-Kdf7AWJ8f81OdaIVOCiYUV9IzsQmk6w2vURHO8LYeCTvO8il3nZNEKYlWregrLMKrCE1mrENHS9wpQOKI"/>
+<div class="watermark">Courtly</div>
+</div>
+<div class="relative overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC13JiQHQjyWxWZ-4_nTitwfJVRXeYMSZRWd11T9XYF4HdggoObV3CpVJYMAskUEhEb_QPuR_h3kKPuT1z0If5KAsLsCTjTkt3u2M9AZCWo2PVvrPXvDyO6_5l7OjfHnlCiMFD5i7Ys883AvLuxyXKrdW5jRMLMgN43XdrVaa63_JZ3m0Xjj3I--A_pCUnZ6FYqo9tCKuYBz-3tUeWSxy9HqotjSw9kbZEwMNESgfyP-pLT7-XLrSaM9oiXl1lZ55d5SA_5eV1Ru_4"/>
+<div class="watermark">Courtly</div>
+</div>
+<button class="absolute bottom-6 right-6 bg-white/95 backdrop-blur-md px-4 py-2 rounded-lg text-sm font-medium border border-[#E6E2DF] flex items-center gap-2 hover:bg-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">apps</span>
+            View all 12 photos
+        </button>
+</section>
+<!-- Identity Strip -->
+<section class="border-b border-surface-variant pb-12 mb-12">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div>
+<h1 class="font-display-lg text-headline-xl text-primary mb-2">Isabella</h1>
+<div class="flex flex-wrap items-center gap-2 text-on-surface-variant">
+<span class="text-lg">Independent</span>
+<span class="text-on-surface/20">•</span>
+<span class="text-lg">Available in Sablon · Brussels Centre · Ixelles</span>
+<span class="text-on-surface/20">•</span>
+<span class="text-lg">31</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-3">
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container text-xs font-semibold uppercase tracking-widest rounded-full border border-outline-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> Age verified
+                    </span>
+<span class="px-3 py-1 bg-surface-container text-xs font-semibold uppercase tracking-widest rounded-full border border-outline-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span> Photo verified
+                    </span>
+<span class="px-3 py-1 bg-surface-container text-xs font-semibold uppercase tracking-widest rounded-full border border-outline-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span> Recently active
+                    </span>
+</div>
+<p class="text-sm text-on-surface/50 italic">Availability updated 2 hours ago</p>
+</div>
+</div>
+</section>
+<!-- Main Content Columns -->
+<div class="grid lg:grid-cols-3 gap-16 pb-24">
+<!-- Left Main Content -->
+<div class="lg:col-span-2 space-y-16">
+<!-- Tagline -->
+<p class="text-2xl font-serif italic text-primary leading-relaxed border-l-2 border-secondary-fixed pl-8">
+                "Art history, architecture, and unhurried conversation in the Sablon."
+            </p>
+<!-- About -->
+<article class="space-y-6">
+<h3 class="font-headline-md text-headline-md border-b border-surface-variant pb-4">About</h3>
+<div class="font-body-lg text-on-surface-variant space-y-6 leading-relaxed max-w-2xl"><p>I'm an art historian by training and by inclination — I work freelance with smaller Belgian galleries and spend more time than I should in the Magritte and the Bozar.</p><p>What I bring to the time we spend together is patient attention. I'm a good listener, I read widely, and I think company should feel unhurried — long lunches, quiet hotel bars, the kind of evening where conversation finds its own rhythm without anyone needing to perform.</p><p>I speak French, English, and Dutch. I'm most comfortable in Sablon, the Centre, and Ixelles. I welcome thoughtful clients who value good company as much as good conversation, and I prefer that first meetings happen in public — a coffee, a drink — so we can both get a sense of each other before anything longer.</p></div>
+</article>
+<!-- Languages -->
+<div class="space-y-6">
+<h3 class="font-headline-md text-headline-md border-b border-surface-variant pb-4">Languages</h3>
+<div class="flex gap-4">
+<span class="px-5 py-2 bg-surface-container-low text-on-surface border border-outline-variant rounded-full text-sm font-medium">Français</span>
+<span class="px-5 py-2 bg-surface-container-low text-on-surface border border-outline-variant rounded-full text-sm font-medium">English</span>
+<span class="px-5 py-2 bg-surface-container-low text-on-surface border border-outline-variant rounded-full text-sm font-medium">Nederlands</span>
+</div>
+</div>
+<!-- Service -->
+<div class="space-y-6">
+<h3 class="font-headline-md text-headline-md border-b border-surface-variant pb-4">Service</h3>
+<div class="flex gap-4 mb-6">
+<span class="px-5 py-2 bg-primary text-white rounded-full text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">home</span> Incall fixed
+                    </span>
+<span class="px-5 py-2 border border-primary text-primary rounded-full text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">directions_run</span> Outcall
+                    </span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-sm font-label-caps tracking-widest text-on-surface/50 uppercase">Service areas</span>
+<p class="text-lg text-on-surface-variant">Sablon · Brussels Centre · Ixelles</p>
+</div>
+</div>
+<!-- Rates -->
+<div class="space-y-8">
+<h3 class="font-headline-md text-headline-md border-b border-surface-variant pb-4">Rates</h3>
+<div class="max-w-md bg-surface-container-low rounded-xl border border-surface-variant overflow-hidden">
+<table class="w-full text-left">
+<tbody class="divide-y divide-surface-variant">
+<tr>
+<td class="px-6 py-4 text-on-surface-variant">1 Hour</td>
+<td class="px-6 py-4 text-right font-semibold">€350</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-on-surface-variant">2 Hours</td>
+<td class="px-6 py-4 text-right font-semibold">€600</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-on-surface-variant">3 Hours</td>
+<td class="px-6 py-4 text-right font-semibold">€850</td>
+</tr>
+<tr><td class="px-6 py-4 text-on-surface-variant">Dinner date (3 hours, includes preparation)</td><td class="px-6 py-4 text-right font-semibold">€800</td></tr>
+<tr class="bg-surface-container-high">
+<td class="px-6 py-4 text-on-surface-variant font-medium">Overnight (12 hrs)</td>
+<td class="px-6 py-4 text-right font-bold">€2,400</td>
+</tr>
+<tr><td class="px-6 py-4 text-on-surface-variant">Outcall surcharge (within Brussels-Capital)</td><td class="px-6 py-4 text-right font-semibold">+€100</td></tr></tbody>
+</table>
+</div>
+<p class="text-xs text-on-surface/40 leading-relaxed max-w-xl italic">
+                    Rates are published by the independent provider for advertising purposes only. Courtly does not arrange bookings, collect payments, process deposits, or act as an agent.
+                </p>
+</div>
+<!-- Availability -->
+<div class="space-y-6">
+<h3 class="font-headline-md text-headline-md border-b border-surface-variant pb-4">Availability</h3>
+<div class="flex items-center gap-4">
+<span class="px-5 py-2 bg-green-50 text-green-700 border border-green-100 rounded-full text-sm font-bold flex items-center gap-2">
+<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Available today
+                    </span>
+<span class="text-sm text-on-surface/50">Last updated today at 11:45 AM</span>
+</div>
+</div>
+<!-- Last Updated -->
+<div class="pt-12 text-[11px] font-label-caps tracking-[0.2em] text-on-surface/30">
+                PROFILE LAST UPDATED · 14 APRIL 2026
+            </div>
+</div>
+<!-- Right Rail (Sticky Contact Card) -->
+<div class="lg:col-span-1">
+<div class="sticky top-24 space-y-8">
+<!-- Contact Card -->
+<div class="bg-[#F7F3ED] rounded-2xl p-8 border border-[#E6E2DF] shadow-md shadow-primary/5">
+<h4 class="font-headline-md text-2xl mb-1">Contact Isabella</h4>
+<p class="text-on-surface/60 text-sm mb-8">Independent provider · Direct contact only</p>
+<button class="w-full bg-[#2A2622] text-[#FDF9F3] py-4 rounded-xl font-semibold tracking-wide hover:scale-[1.02] active:scale-95 transition-all duration-300 shadow-lg shadow-primary/20 mb-8">
+                        Show contact details
+                    </button>
+<div class="space-y-4 border-t border-surface-variant pt-8">
+<div class="flex items-center gap-4 text-on-surface-variant"><span class="material-symbols-outlined">chat_bubble</span><span class="text-sm font-medium">+32 470 12 34 56</span></div>
+<div class="flex items-center gap-4 text-on-surface-variant"><span class="material-symbols-outlined">send</span><span class="text-sm font-medium">@isabella_brx</span></div>
+<div class="flex items-center gap-4 text-on-surface-variant"><span class="material-symbols-outlined">alternate_email</span><span class="text-sm font-medium">isabella@privatemail.eu</span></div>
+</div>
+<div class="mt-8 pt-8 border-t border-surface-variant">
+<p class="text-[10px] text-on-surface/40 leading-relaxed text-center italic">
+                            This profile represents an independent service provider. Courtly acts as a directory and does not participate in the arrangement of meetings or handle financial transactions. Verification status is based on identity documents provided at time of registration.
+                        </p>
+</div>
+</div>
+<!-- Map Thumbnail -->
+<div class="bg-surface-container-low rounded-2xl p-6 border border-surface-variant">
+<div class="aspect-[4/3] bg-[#E9E1D5]/40 rounded-xl mb-4 relative overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-24 h-24 rounded-full bg-[#C5A059]/10 blur-xl"></div>
+<div class="w-16 h-16 rounded-full bg-[#C5A059]/15 blur-lg -translate-x-10 translate-y-4"></div>
+<div class="w-20 h-20 rounded-full bg-[#C5A059]/10 blur-xl translate-x-12 -translate-y-6"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#3D3530]/40 text-4xl">location_on</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] font-label-caps text-on-surface/40 uppercase">Service areas</span>
+<p class="text-sm font-medium">Sablon · Brussels Centre · Ixelles</p>
+</div>
+<a class="text-sm text-primary font-semibold flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                            View on map <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Report Link -->
+<div class="flex justify-center">
+<a class="flex items-center gap-2 text-on-surface/40 text-xs hover:text-error transition-colors uppercase tracking-widest font-semibold" href="#">
+<span class="material-symbols-outlined text-[16px]">flag</span> Report this profile
+                    </a>
+</div>
+</div>
+</div>
+</div>
+<!-- New Disclaimer Section -->
+<section class="bg-surface-container-low border-t border-b border-outline-variant py-10 -mx-8 px-8 mb-24">
+<div class="max-w-3xl mx-auto text-center">
+<p class="text-xs italic text-on-surface-variant">
+                Courtly is an advertising directory only. Providers are independent adults who publish and manage their own profiles. Courtly does not arrange meetings, process client payments, collect deposits, set rates, manage schedules, employ providers, or act as an agency.
+            </p>
+</div>
+</section>
+<!-- Other Providers -->
+<section class="pb-32">
+<h2 class="font-headline-md text-headline-md mb-12">Other providers in Brussels</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Card 1: Margot -->
+<div class="group cursor-pointer">
+<div class="h-[400px] rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo6_gbznuCwfu1rsWYpRIDK0hckNOn1G4bsl9g4iQHhB8qD-dxwxz8iljxnUW-WMqqL-0vDxsGSL90okEzZQ6nnq2--avJYywayGajMna-RomYJymidAhO9_hnfZqyifGIE1eVbqAQf9X-ZChLAw5V45QhGFLIgrE56mDu-DDGylyFQnIsXCgl7o5_ZK6xcaxPvMQ7T1aY1h4oTFnbfOL_pZxHcBa0zCmasdegbHO_HGYXsWfxdKMoheVwOCJw_FoJPCgCiuDyXIg"/>
+<div class="absolute top-0 inset-x-0 h-1.5 bg-[#C5A059]/30"></div>
+</div>
+<h3 class="font-headline-md text-xl mb-1">Margot</h3>
+<p class="text-sm text-on-surface/50 italic line-clamp-1">Classical music and refined dining in the Louise district.</p>
+</div>
+<!-- Card 2: Sasha -->
+<div class="group cursor-pointer">
+<div class="h-[400px] rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYDFX3xGi_WRolg3N6wD-WEvygIX1CbyloDomGfKNmUiKk32lvxYNVRWdzqmJTLcaG5WqZjpEN6dAFq8IuYbTx-mycflyDhCJ9NE1s3IoUJYPNM6rq-JnSs3DfJvZRR-6JUFDSuEiPNetbiNIwRK-jl81vPvZNQCvGIDk1ZlyCALdDRdjW2B4AZjlLnT-rlXWlUF3WWTf4l2-YFGE5DH0v4PPAwVAoa5V1iHxnf8PquHaHTwlo6l9MndCMt8q0v09JOZHZEaSTFQE"/>
+<div class="absolute top-0 inset-x-0 h-1.5 bg-[#C5A059]/30"></div>
+</div>
+<h3 class="font-headline-md text-xl mb-1">Sasha</h3>
+<p class="text-sm text-on-surface/50 italic line-clamp-1">Sophisticated evenings and architectural strolls.</p>
+</div>
+<!-- Card 3: Théo -->
+<div class="group cursor-pointer">
+<div class="h-[400px] rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYXBKVNoZ_UyRZ4VOZl27tLa_8dNe6XK2w0lzUmOYUBOqtwoA46DPVECh6GOBghzIoh_t70Hu_mjyRoj3V8xLS6p6CEmevHM4Ro4Idpu7EuuPwfmllJjMr9atrjyE2tixBrovNqNxnePqiR4Z3YDChFiXjZo6k3DUFZZgyKWU6mxq_SLlVpT_J6prCoZuv5bD8mlgre8OevVSFvNhz_UCwMpU8ljDs8eYdClY8f7BYBnCcsSOwI2AsIll2opvwqdiNMDaI5IZkJls"/>
+<div class="absolute top-0 inset-x-0 h-1.5 bg-[#C5A059]/30"></div>
+</div>
+<h3 class="font-headline-md text-xl mb-1">Théo</h3>
+<p class="text-sm text-on-surface/50 italic line-clamp-1">Contemporary art and philosophical dialogue.</p>
+</div>
+<!-- Card 4: Sara -->
+<div class="group cursor-pointer">
+<div class="h-[400px] rounded-xl overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUtWJLTznv2VZuO5OPLw0GaZTOya6v65Aj-Ob6aMSSaRC3JeRWAqlHX1TKFL321eDHPzegqf4pICkqa3ssVmOAFAd9agKXLu6DnOMctqB-pwvR3e2lZN5hvOLHLIK-pM3ZijrKIWKrEJ9wjNUdcIvGGSZSo0G2Nv9HtucIDDWna8psgngl-OpvW1OigU5sgVFSif42J-LlT-FWB5acMMWPqm2RVOKFLG2LZuaUV6y3B_dwEwwIoRYisJQSSXo-RH5MF9qja6rPFJU"/>
+<div class="absolute top-0 inset-x-0 h-1.5 bg-[#C5A059]/30"></div>
+</div>
+<h3 class="font-headline-md text-xl mb-1">Sara</h3>
+<p class="text-sm text-on-surface/50 italic line-clamp-1">Gallery openings and the hidden gems of Saint-Gilles.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Canonical Footer -->
+<footer class="bg-white border-t border-[#E6E2DF]">
+<div class="max-w-[1440px] mx-auto px-8 py-20 grid grid-cols-2 md:grid-cols-6 gap-12">
+<!-- Column 1 -->
+<div class="col-span-2 space-y-6">
+<a class="text-2xl font-serif text-primary" href="#">Courtly</a>
+<p class="text-sm text-on-surface/60 leading-relaxed max-w-xs">
+                A curated advertising directory for independent companions across Belgium.
+            </p>
+<div class="flex gap-3 text-xs font-semibold">
+<a class="text-on-surface/40 hover:text-primary transition-colors" href="#">FR</a>
+<span class="text-on-surface/10">|</span>
+<a class="text-on-surface/40 hover:text-primary transition-colors" href="#">NL</a>
+<span class="text-on-surface/10">|</span>
+<span class="text-primary">EN</span>
+<span class="text-on-surface/10">|</span>
+<a class="text-on-surface/40 hover:text-primary transition-colors" href="#">DE</a>
+</div>
+</div>
+<!-- Column 2 -->
+<div class="space-y-4">
+<h5 class="font-label-caps text-xs tracking-widest text-on-surface uppercase">Browse</h5>
+<ul class="space-y-2 text-sm text-on-surface/60">
+<li><a class="hover:text-primary transition-colors" href="#">Companions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Brussels</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Antwerp</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Ghent</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Liège</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Charleroi</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bruges</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Featured companions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Available now</a></li>
+</ul>
+</div>
+<!-- Column 3 -->
+<div class="space-y-4">
+<h5 class="font-label-caps text-xs tracking-widest text-on-surface uppercase">For providers</h5>
+<ul class="space-y-2 text-sm text-on-surface/60">
+<li><a class="hover:text-primary transition-colors" href="#">Apply as a provider</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Provider login</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Verification process</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Provider help</a></li>
+</ul>
+</div>
+<!-- Column 4 -->
+<div class="space-y-4">
+<h5 class="font-label-caps text-xs tracking-widest text-on-surface uppercase">Trust &amp; safety</h5>
+<ul class="space-y-2 text-sm text-on-surface/60">
+<li><a class="hover:text-primary transition-colors" href="#">About Courtly</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">How we verify</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Editorial values</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Report a concern</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Safeguarding &amp; anti-trafficking</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Transparency reports</a></li>
+</ul>
+</div>
+<!-- Column 5 -->
+<div class="space-y-4">
+<h5 class="font-label-caps text-xs tracking-widest text-on-surface uppercase">Legal</h5>
+<ul class="space-y-2 text-sm text-on-surface/60">
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Settings</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Acceptable Use Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Imprint / Mentions légales</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">DSA point of contact</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Legal Strip -->
+<div class="bg-[#D8CFBF] py-12 px-8 text-center border-t border-primary/5">
+<div class="max-w-4xl mx-auto space-y-6">
+<p class="text-[11px] font-bold tracking-[0.3em] uppercase text-primary/80">USERS MUST BE 18+ TO ACCESS THIS SITE. ADULT CONTENT IS FOR COMPLIANT CONSUMERS ONLY.</p>
+<p class="text-xs text-primary/60 leading-relaxed italic">
+                Courtly is an adult advertising directory for independent providers. Courtly does not arrange bookings, collect client payments, process deposits, or act as an agency.
+            </p>
+<div class="pt-4 text-[10px] font-label-caps tracking-widest text-primary/50 uppercase">
+                Copyright © 2026 Courtly. All rights reserved.
+            </div>
+</div>
+</div>
+</footer>
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-[#3D3530] py-3 px-5 flex items-center justify-between z-40 shadow-lg shadow-black/30">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span>
+<span class="text-[10px] uppercase tracking-[0.2em] text-[#FDF9F3]/80 font-bold">Available today</span>
+</div>
+<button class="bg-[#FDF9F3] text-[#3D3530] px-5 py-2.5 text-xs uppercase tracking-[0.15em] font-bold rounded-md hover:bg-white transition-colors">
+       Show contact details
+     </button>
+</div></body></html>
